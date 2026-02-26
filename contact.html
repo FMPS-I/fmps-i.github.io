@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FMPS-i · Nos Délégués</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.group-label { font-family:'Oswald',sans-serif; font-size:0.68rem; font-weight:700; letter-spacing:5px; text-transform:uppercase; color:var(--white-30); margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid var(--border); margin-top:40px; }
+.group-label:first-of-type { margin-top:0; }
+
+.delegates-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1px; background:var(--border); margin-bottom:4px; }
+
+.delegate-card {
+  background: var(--surface);
+  text-decoration: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 24px;
+  position: relative;
+  transition: background 0.25s;
+  border-left: 3px solid transparent;
+}
+.delegate-card:hover { background:var(--surface-2); border-left-color:var(--accent); }
+
+.delegate-avatar {
+  width:50px; height:50px; flex-shrink:0;
+  border-radius:50%;
+  background: var(--white-10);
+  border: 1px solid var(--border);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.2rem;
+  color:var(--white-80);
+}
+.delegate-name { font-family:'Oswald',sans-serif; font-weight:700; font-size:1rem; letter-spacing:.5px; color:var(--white); margin-bottom:2px; }
+.delegate-role { font-family:'Oswald',sans-serif; font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+.delegate-phone { font-family:'Bebas Neue',sans-serif; font-size:1.25rem; letter-spacing:2px; color:var(--white); display:flex; align-items:center; gap:6px; }
+.delegate-tap { font-family:'Oswald',sans-serif; font-size:0.62rem; letter-spacing:2px; text-transform:uppercase; color:var(--white-30); margin-top:3px; }
+.delegate-arrow { position:absolute; right:20px; top:50%; transform:translateY(-50%); color:var(--white-30); font-size:1.4rem; transition:right .2s, color .2s; font-family:'Bebas Neue',sans-serif; }
+.delegate-card:hover .delegate-arrow { right:15px; color:var(--accent); }
+
+.info-note { background:var(--surface); border:1px solid var(--border); border-left:4px solid var(--accent); padding:22px 28px; margin-bottom:40px; display:flex; gap:14px; align-items:flex-start; }
+.info-note-icon { font-size:1.5rem; flex-shrink:0; }
+.info-note-text { font-size:0.95rem; line-height:1.78; color:var(--white-80); }
+.info-note-text strong { color:var(--white); }
+
+.topics-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1px; background:var(--border); margin-bottom:48px; }
+.topic-pill { background:var(--surface); padding:14px 18px; display:flex; gap:10px; align-items:center; font-size:0.9rem; color:var(--white-55); line-height:1.5; transition:background .2s, color .2s; }
+.topic-pill:hover { background:var(--surface-2); color:var(--white); }
+.topic-pill-icon { font-size:1.1rem; flex-shrink:0; }
+
+.sites-block { background:var(--surface); border:1px solid var(--border); border-top:2px solid var(--accent); padding:28px 32px; text-align:center; }
+.sites-label { font-family:'Oswald',sans-serif; font-size:0.68rem; letter-spacing:4px; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+.sites-names { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:6px; color:var(--white); }
+.sites-note { font-size:0.88rem; color:var(--white-30); margin-top:8px; font-family:'Oswald',sans-serif; letter-spacing:1px; }
+
+@media(max-width:500px){ .delegates-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<nav id="main-nav"></nav>
+<div id="mobile-menu" class="mobile-menu"></div>
+<div class="page">
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-label">Appelez-nous</div>
+      <h1 class="page-title">Nos Délégués</h1>
+      <p class="page-desc">Un problème au travail, une question sur vos droits, un incident à signaler ? Nos délégués syndicaux et membres du CSE sont disponibles directement par téléphone.</p>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="info-note reveal">
+      <div class="info-note-icon">📞</div>
+      <div class="info-note-text"><strong>Appelez ou envoyez un SMS</strong> directement à nos délégués. Présents sur les trois sites HUBSAFE, ils vous accompagnent gratuitement dans toutes vos démarches. <strong>Sur mobile, touchez une carte pour appeler directement.</strong></div>
+    </div>
+
+    <div class="group-label">Délégués Syndicaux</div>
+    <div class="delegates-grid">
+      <a href="tel:+33785371558" class="delegate-card reveal">
+        <div class="delegate-avatar">AI</div>
+        <div style="flex:1">
+          <div class="delegate-name">Akim Irbouh</div>
+          <div class="delegate-role">Délégué Syndical</div>
+          <div class="delegate-phone">📞 +33 7 85 37 15 58</div>
+          <div class="delegate-tap">Toucher pour appeler</div>
+        </div>
+        <div class="delegate-arrow">›</div>
+      </a>
+      <a href="tel:+33613658082" class="delegate-card reveal">
+        <div class="delegate-avatar">RD</div>
+        <div style="flex:1">
+          <div class="delegate-name">Rabah Deziri</div>
+          <div class="delegate-role">Délégué Syndical</div>
+          <div class="delegate-phone">📞 +33 6 13 65 80 82</div>
+          <div class="delegate-tap">Toucher pour appeler</div>
+        </div>
+        <div class="delegate-arrow">›</div>
+      </a>
+      <a href="tel:+33658692876" class="delegate-card reveal">
+        <div class="delegate-avatar">LK</div>
+        <div style="flex:1">
+          <div class="delegate-name">Lamia Karim</div>
+          <div class="delegate-role">Déléguée Syndicale</div>
+          <div class="delegate-phone">📞 +33 6 58 69 28 76</div>
+          <div class="delegate-tap">Toucher pour appeler</div>
+        </div>
+        <div class="delegate-arrow">›</div>
+      </a>
+    </div>
+
+    <div class="group-label" style="margin-top:32px;">Membres du CSE</div>
+    <div class="delegates-grid">
+      <a href="tel:+33614136483" class="delegate-card reveal">
+        <div class="delegate-avatar">KE</div>
+        <div style="flex:1">
+          <div class="delegate-name">Khadija El Hamouyi</div>
+          <div class="delegate-role">Membre du CSE</div>
+          <div class="delegate-phone">📞 +33 6 14 13 64 83</div>
+          <div class="delegate-tap">Toucher pour appeler</div>
+        </div>
+        <div class="delegate-arrow">›</div>
+      </a>
+      <a href="tel:+33680895763" class="delegate-card reveal">
+        <div class="delegate-avatar">SA</div>
+        <div style="flex:1">
+          <div class="delegate-name">Sanae</div>
+          <div class="delegate-role">Membre du CSE</div>
+          <div class="delegate-phone">📞 +33 6 80 89 57 63</div>
+          <div class="delegate-tap">Toucher pour appeler</div>
+        </div>
+        <div class="delegate-arrow">›</div>
+      </a>
+    </div>
+
+    <div class="stripe" style="margin:48px 0;"></div>
+
+    <div class="section-heading reveal">Pour quoi nous contacter ?</div>
+    <p class="section-sub reveal">Nos délégués peuvent vous aider dans toutes ces situations — et bien d'autres.</p>
+
+    <div class="topics-grid">
+      <div class="topic-pill reveal"><span class="topic-pill-icon">⚠️</span>Accident du travail (physique ou psychique)</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">😤</span>Harcèlement moral ou sexuel</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">📋</span>Entretien disciplinaire</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">💰</span>Problème de salaire ou de prime</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">📝</span>Licenciement ou rupture conventionnelle</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">🏥</span>Maladie professionnelle</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">🔄</span>Mutation forcée ou changement de poste</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">⏰</span>Heures supplémentaires non payées</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">📖</span>Violation d'un accord collectif</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">🗳️</span>Questions sur les élections CSE</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">🤝</span>Rejoindre le syndicat</div>
+      <div class="topic-pill reveal"><span class="topic-pill-icon">❓</span>Toute autre question sur vos droits</div>
+    </div>
+
+    <div class="sites-block reveal">
+      <div class="sites-label">Présents sur vos 3 sites</div>
+      <div class="sites-names">CDG · ORLY · LE BOURGET</div>
+      <div class="sites-note">Appel ou SMS · Service gratuit pour tous les salariés HUBSAFE</div>
+    </div>
+
+  </div>
+
+  <div class="stripe"></div>
+  <footer id="main-footer"></footer>
+</div>
+<script src="main.js"></script>
+<script>buildNav('contact.html');</script>
+</body>
+</html>

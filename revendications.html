@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FMPS-i · Nos Revendications</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.pillar-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1px; background:var(--border); margin-bottom:56px; }
+.pillar-card {
+  background: var(--surface);
+  padding: 36px 28px;
+  position: relative;
+  transition: background 0.25s;
+  border-top: 2px solid transparent;
+}
+.pillar-card:hover { background: var(--surface-2); border-top-color: var(--accent); }
+.pillar-num { font-family:'Bebas Neue',sans-serif; font-size:4rem; color:rgba(255,255,255,0.04); line-height:1; position:absolute; top:14px; right:20px; letter-spacing:-2px; }
+.pillar-icon { font-size:2rem; margin-bottom:14px; display:block; }
+.pillar-title { font-family:'Oswald',sans-serif; font-weight:700; font-size:1rem; letter-spacing:1.5px; text-transform:uppercase; color:var(--white); margin-bottom:10px; }
+.pillar-text { font-size:0.93rem; line-height:1.75; color:var(--white-55); margin-bottom:14px; }
+.pillar-points { list-style:none; display:flex; flex-direction:column; gap:6px; }
+.pillar-points li { padding:8px 12px; background:var(--white-10); border-left:2px solid var(--accent); font-size:0.88rem; color:var(--white-80); line-height:1.5; }
+
+.quote-band {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 56px 48px;
+  text-align: center;
+  margin-bottom: 56px;
+  position: relative;
+}
+.quote-band::before { content:'"'; position:absolute; top:20px; left:48px; font-family:'Bebas Neue',sans-serif; font-size:8rem; color:rgba(255,255,255,0.03); line-height:1; }
+.quote-text { font-family:'Bebas Neue',sans-serif; font-size:clamp(1.6rem,5vw,3.2rem); letter-spacing:2px; line-height:1.15; color:var(--white); margin-bottom:12px; }
+.quote-text .hl { color:var(--accent); }
+.quote-sub { font-family:'Oswald',sans-serif; font-size:0.78rem; letter-spacing:3px; text-transform:uppercase; color:var(--white-30); }
+
+.engage-list { display:flex; flex-direction:column; gap:1px; background:var(--border); }
+.engage-item { background:var(--surface); padding:22px 28px; display:flex; align-items:flex-start; gap:18px; transition:background .2s; }
+.engage-item:hover { background:var(--surface-2); }
+.engage-check { width:30px; height:30px; flex-shrink:0; background:var(--accent); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:0.85rem; margin-top:2px; }
+.engage-title { font-family:'Oswald',sans-serif; font-weight:700; font-size:0.97rem; letter-spacing:1px; color:var(--white); margin-bottom:3px; }
+.engage-desc { font-size:0.9rem; color:var(--white-55); line-height:1.65; }
+
+@media(max-width:600px){ .quote-band{padding:40px 20px;} }
+</style>
+</head>
+<body>
+<nav id="main-nav"></nav>
+<div id="mobile-menu" class="mobile-menu"></div>
+<div class="page">
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-label">Ce que nous portons</div>
+      <h1 class="page-title">Nos Revendications</h1>
+      <p class="page-desc">Des salaires dignes, des conditions de travail décentes, des accords respectés. Ce n'est pas un programme idéal — c'est le minimum que vous méritez.</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-heading reveal">Nos 4 piliers</div>
+    <p class="section-sub reveal">Chaque revendication est concrète, défendable et portée par vos délégués au quotidien.</p>
+
+    <div class="pillar-grid">
+      <div class="pillar-card reveal">
+        <span class="pillar-num">01</span>
+        <span class="pillar-icon">💸</span>
+        <div class="pillar-title">Pouvoir d'achat</div>
+        <p class="pillar-text">Nos salaires ne suivent pas l'inflation. C'est un fait. Il est temps d'exiger des augmentations réelles.</p>
+        <ul class="pillar-points">
+          <li>Augmentation générale indexée sur l'inflation</li>
+          <li>Révision des grilles salariales obsolètes</li>
+          <li>Primes de résultats équitables et transparentes</li>
+          <li>Fin des inégalités de traitement entre sites</li>
+        </ul>
+      </div>
+      <div class="pillar-card reveal">
+        <span class="pillar-num">02</span>
+        <span class="pillar-icon">🏗️</span>
+        <div class="pillar-title">Conditions de travail</div>
+        <p class="pillar-text">Pressions, cadences, management agressif : les conditions se dégradent. Votre santé est notre priorité.</p>
+        <ul class="pillar-points">
+          <li>Réduction des cadences abusives</li>
+          <li>Lutte contre le management par la peur</li>
+          <li>Respect du droit à la déconnexion</li>
+          <li>Plan de prévention des risques psychosociaux</li>
+        </ul>
+      </div>
+      <div class="pillar-card reveal">
+        <span class="pillar-num">03</span>
+        <span class="pillar-icon">📋</span>
+        <div class="pillar-title">Accords collectifs</div>
+        <p class="pillar-text">Les accords signés doivent être respectés. Sans exception. Nous veillerons à leur application stricte.</p>
+        <ul class="pillar-points">
+          <li>Application intégrale des accords en vigueur</li>
+          <li>Renégociation des accords défavorables</li>
+          <li>Transparence sur les négociations en cours</li>
+          <li>Droit d'alerte en cas de non-respect</li>
+        </ul>
+      </div>
+      <div class="pillar-card reveal">
+        <span class="pillar-num">04</span>
+        <span class="pillar-icon">⚖️</span>
+        <div class="pillar-title">Justice sociale</div>
+        <p class="pillar-text">Égalité de traitement, reconnaissance du travail, lutte contre toutes les formes de discrimination.</p>
+        <ul class="pillar-points">
+          <li>Égalité salariale femmes / hommes</li>
+          <li>Lutte contre les discriminations</li>
+          <li>Protection des lanceurs d'alerte</li>
+          <li>Accès équitable à la formation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote-band reveal">
+    <div class="quote-text">Pouvoir d'achat en baisse. Avantages supprimés.<br>Conditions dégradées. <span class="hl">Ça suffit.</span></div>
+    <div class="quote-sub">FMPS-i · Élections CSE HUBSAFE · Mai 2026</div>
+  </div>
+
+  <div class="content">
+    <div class="section-heading reveal">Nos engagements concrets</div>
+    <p class="section-sub reveal">Ce que vos représentants FMPS-i feront dès leur élection au CSE.</p>
+
+    <div class="engage-list">
+      <div class="engage-item reveal"><div class="engage-check">✓</div><div><div class="engage-title">Audit immédiat des salaires</div><p class="engage-desc">Demande d'un audit complet des grilles salariales HUBSAFE lors de la première réunion CSE.</p></div></div>
+      <div class="engage-item reveal"><div class="engage-check">✓</div><div><div class="engage-title">Commission conditions de travail</div><p class="engage-desc">Création d'une commission dédiée aux conditions de travail sur les trois sites avec remontée mensuelle.</p></div></div>
+      <div class="engage-item reveal"><div class="engage-check">✓</div><div><div class="engage-title">Suivi des accords collectifs</div><p class="engage-desc">Mise en place d'un tableau de suivi public et accessible à tous les salariés.</p></div></div>
+      <div class="engage-item reveal"><div class="engage-check">✓</div><div><div class="engage-title">Permanence hebdomadaire</div><p class="engage-desc">Une permanence syndicale chaque semaine sur chaque site pour écouter et défendre vos droits.</p></div></div>
+      <div class="engage-item reveal"><div class="engage-check">✓</div><div><div class="engage-title">Compte-rendu systématique</div><p class="engage-desc">Diffusion d'un compte-rendu après chaque réunion CSE à tous les salariés HUBSAFE.</p></div></div>
+    </div>
+
+    <div style="margin-top:48px;text-align:center;">
+      <a href="contact.html" class="btn-primary">Contacter nos délégués</a>
+    </div>
+  </div>
+
+  <div class="stripe"></div>
+  <footer id="main-footer"></footer>
+</div>
+<script src="main.js"></script>
+<script>buildNav('revendications.html');</script>
+</body>
+</html>

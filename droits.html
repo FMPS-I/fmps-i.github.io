@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FMPS-i · Vos Droits</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.legal-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  padding: 36px 40px;
+  margin-bottom: 48px;
+  position: relative;
+}
+.legal-tag { display:inline-block; background:var(--accent); color:var(--white); font-family:'Oswald',sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:5px 14px; clip-path:polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%); margin-bottom:18px; }
+.legal-main-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(1.6rem,4vw,2.6rem); letter-spacing:2px; color:var(--white); margin-bottom:18px; line-height:1.1; }
+.legal-body { font-size:1rem; line-height:1.82; color:var(--white-80); margin-bottom:12px; }
+.legal-body strong { color:var(--white); }
+.legal-highlight { display:block; background:var(--white-10); border-left:3px solid var(--accent); padding:14px 18px; margin:16px 0; font-size:0.98rem; line-height:1.8; font-style:italic; color:var(--white-80); }
+
+.examples-grid { display:flex; flex-direction:column; gap:1px; background:var(--border); margin-bottom:48px; }
+.example-card { background:var(--surface); padding:26px 28px; display:flex; gap:18px; align-items:flex-start; transition:background .2s; }
+.example-card:hover { background:var(--surface-2); }
+.ex-icon-wrap { width:44px; height:44px; flex-shrink:0; background:var(--white-10); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; border:1px solid var(--border); }
+.ex-title { font-family:'Oswald',sans-serif; font-weight:700; font-size:0.97rem; letter-spacing:.5px; color:var(--white); margin-bottom:5px; }
+.ex-desc { font-size:0.9rem; color:var(--white-55); line-height:1.68; }
+.ex-result { margin-top:8px; font-size:0.82rem; color:var(--accent); font-family:'Oswald',sans-serif; letter-spacing:1px; }
+
+.oblig-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); margin-bottom:48px; }
+.oblig-box { background:var(--surface); padding:28px 24px; }
+.oblig-header { font-family:'Oswald',sans-serif; font-weight:700; font-size:0.75rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:16px; }
+.oblig-do .oblig-header { color:var(--accent); }
+.oblig-dont .oblig-header { color:rgba(220,80,80,0.9); }
+.oblig-list { list-style:none; display:flex; flex-direction:column; gap:8px; }
+.oblig-list li { font-size:0.92rem; color:var(--white-80); line-height:1.6; display:flex; gap:10px; align-items:baseline; }
+.oblig-do .oblig-list li::before { content:'✓'; color:var(--accent); font-weight:700; flex-shrink:0; }
+.oblig-dont .oblig-list li::before { content:'✗'; color:rgba(220,80,80,0.9); font-weight:700; flex-shrink:0; }
+
+.steps-list { display:flex; flex-direction:column; gap:1px; background:var(--border); margin-bottom:48px; }
+.step-item { background:var(--surface); padding:22px 28px; display:flex; gap:20px; align-items:flex-start; transition:background .2s; }
+.step-item:hover { background:var(--surface-2); }
+.step-num { font-family:'Bebas Neue',sans-serif; font-size:2rem; color:var(--accent); line-height:1; flex-shrink:0; width:40px; }
+.step-title { font-family:'Oswald',sans-serif; font-weight:700; font-size:0.97rem; letter-spacing:1px; color:var(--white); margin-bottom:4px; }
+.step-desc { font-size:0.9rem; color:var(--white-55); line-height:1.65; }
+
+.info-note { background:var(--surface); border:1px solid var(--border); border-left:4px solid var(--accent); padding:24px 28px; margin-bottom:48px; display:flex; gap:16px; align-items:flex-start; }
+.info-note-icon { font-size:1.6rem; flex-shrink:0; }
+.info-note-text { font-size:0.95rem; line-height:1.78; color:var(--white-80); }
+.info-note-text strong { color:var(--white); }
+
+@media(max-width:640px){ .oblig-grid{grid-template-columns:1fr;} .legal-box{padding:24px 20px;} }
+</style>
+</head>
+<body>
+<nav id="main-nav"></nav>
+<div id="mobile-menu" class="mobile-menu"></div>
+<div class="page">
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-label">Vos droits au travail</div>
+      <h1 class="page-title">Connaissez<br>Vos Droits</h1>
+      <p class="page-desc">Crise de nerfs, pleurs, état de choc : ce ne sont pas des "réactions émotionnelles". Ce sont des accidents psychiques du travail, reconnus par la loi.</p>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="legal-box reveal">
+      <div class="legal-tag">⚖ Article L.411-1 · Code de la Sécurité Sociale</div>
+      <div class="legal-main-title">Crise de nerfs, pleurs :<br>C'est un accident du travail</div>
+      <p class="legal-body">
+        <span class="legal-highlight">« Tout fait accidentel survenu à l'occasion du travail entraînant une lésion physique <strong>ou psychique</strong> est un accident du travail. »</span>
+        Les réactions émotionnelles intenses survenues dans le cadre professionnel entrent pleinement dans cette définition. La loi ne fait aucune distinction entre blessure physique et traumatisme psychologique.
+      </p>
+      <p class="legal-body"><strong>Ce que cela signifie concrètement :</strong> dès que vous êtes victime d'une lésion psychique (choc émotionnel, crise de larmes, état de stupeur, crise d'angoisse) survenue dans le cadre de votre travail, vous bénéficiez de la même protection qu'en cas d'accident physique.</p>
+    </div>
+
+    <div class="section-heading reveal">Exemples concrets</div>
+    <p class="section-sub reveal">Ces situations, qui se produisent réellement chez HUBSAFE, sont des accidents du travail.</p>
+
+    <div class="examples-grid">
+      <div class="example-card reveal"><div class="ex-icon-wrap">😢</div><div><div class="ex-title">Une salariée en sanglots après un entretien disciplinaire</div><p class="ex-desc">Suite à un entretien disciplinaire vécu comme humiliant ou injuste, une salariée s'effondre en pleurs et se trouve dans l'incapacité de reprendre son poste.</p><div class="ex-result">→ Accident psychique du travail · Déclaration CPAM obligatoire sous 48h</div></div></div>
+      <div class="example-card reveal"><div class="ex-icon-wrap">😤</div><div><div class="ex-title">Un salarié en crise de nerfs après une altercation avec un supérieur</div><p class="ex-desc">Une dispute violente ou un comportement agressif d'un supérieur hiérarchique provoque une crise de nerfs, tremblements, incapacité à se contrôler.</p><div class="ex-result">→ Accident psychique du travail · L'auteur du comportement peut engager sa responsabilité</div></div></div>
+      <div class="example-card reveal"><div class="ex-icon-wrap">😶</div><div><div class="ex-title">Un agent qui quitte son poste en état de choc</div><p class="ex-desc">Suite à une annonce brutale, une menace ou un incident grave, un agent est incapable de poursuivre son travail et doit quitter son poste.</p><div class="ex-result">→ Accident psychique du travail · Même si aucune blessure physique n'est visible</div></div></div>
+      <div class="example-card reveal"><div class="ex-icon-wrap">😰</div><div><div class="ex-title">Une crise d'angoisse déclenchée par une surcharge de travail</div><p class="ex-desc">Pression excessive, délais impossibles, harcèlement managérial : une crise d'angoisse soudaine survenant pendant les heures de travail est couverte.</p><div class="ex-result">→ Accident psychique du travail · Le contexte professionnel fait foi</div></div></div>
+    </div>
+
+    <div class="stripe" style="margin-bottom:48px;"></div>
+
+    <div class="section-heading reveal">Obligations de l'employeur</div>
+    <p class="section-sub reveal">Ce que l'employeur doit faire — et ce qu'il ne peut pas invoquer pour s'y soustraire.</p>
+
+    <div class="oblig-grid reveal">
+      <div class="oblig-box oblig-do">
+        <div class="oblig-header">✓ Ce qu'il doit faire</div>
+        <ul class="oblig-list">
+          <li>Déclarer l'accident à la CPAM dans les <strong>48 heures</strong></li>
+          <li>Remettre une feuille d'accident du travail au salarié</li>
+          <li>Consigner les faits dans le registre des accidents</li>
+          <li>Prendre les mesures pour prévenir la récidive</li>
+          <li>Ne pas exercer de pression pour décourager la déclaration</li>
+        </ul>
+      </div>
+      <div class="oblig-box oblig-dont">
+        <div class="oblig-header">✗ Ce qu'il ne peut pas dire</div>
+        <ul class="oblig-list">
+          <li>« Ce ne sont que des pleurs »</li>
+          <li>« C'est une personne fragile »</li>
+          <li>« Ce n'est qu'un conflit relationnel »</li>
+          <li>« Il n'y a pas eu de blessure physique »</li>
+          <li>« Ce n'était pas grave »</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-note reveal">
+      <div class="info-note-icon">⚠️</div>
+      <div class="info-note-text"><strong>Important :</strong> la déclaration par l'employeur ne vaut pas reconnaissance automatique. C'est la CPAM qui instruit le dossier. Mais <strong>l'employeur est obligé de déclarer</strong> — il n'a pas le droit de refuser ou d'ignorer les faits qui lui sont rapportés.</div>
+    </div>
+
+    <div class="section-heading reveal">Que faire si ça vous arrive ?</div>
+    <p class="section-sub reveal">Suivez ces étapes pour protéger vos droits.</p>
+
+    <div class="steps-list">
+      <div class="step-item reveal"><div class="step-num">01</div><div><div class="step-title">Consultez un médecin immédiatement</div><p class="step-desc">Rendez-vous chez votre médecin traitant ou aux urgences. Demandez un certificat médical initial mentionnant le lien avec le travail.</p></div></div>
+      <div class="step-item reveal"><div class="step-num">02</div><div><div class="step-title">Déclarez les faits à votre responsable</div><p class="step-desc">Informez votre supérieur hiérarchique par écrit (mail ou message) pour garder une trace des faits.</p></div></div>
+      <div class="step-item reveal"><div class="step-num">03</div><div><div class="step-title">Demandez la feuille d'accident du travail</div><p class="step-desc">Exigez que votre employeur vous remette le formulaire Cerfa de déclaration d'accident du travail. C'est son obligation légale.</p></div></div>
+      <div class="step-item reveal"><div class="step-num">04</div><div><div class="step-title">Contactez immédiatement un délégué FMPS-i</div><p class="step-desc">Nos délégués vous accompagnent gratuitement dans toutes les démarches. Appelez-nous dès que possible.</p></div></div>
+      <div class="step-item reveal"><div class="step-num">05</div><div><div class="step-title">Conservez tous les documents</div><p class="step-desc">Gardez une copie de tous les échanges, certificats et formulaires. En cas de litige, ces preuves sont essentielles.</p></div></div>
+    </div>
+
+    <div style="margin-top:48px;text-align:center;">
+      <a href="contact.html" class="btn-primary">Contacter un délégué maintenant</a>
+    </div>
+  </div>
+
+  <div class="stripe"></div>
+  <footer id="main-footer"></footer>
+</div>
+<script src="main.js"></script>
+<script>buildNav('droits.html');</script>
+</body>
+</html>
