@@ -3,7 +3,7 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Vos Droits — FMPS-i</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,600;1,400&display=swap');
 :root{
   --navy:#0B1E3D;--navy2:#0F2850;--blue:#1A4A8A;--blue2:#1E5BA8;
   --sky:#2E86C1;--ice:#EBF5FF;--white:#FFFFFF;--slate:#5D6D7E;
@@ -14,8 +14,6 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{background:var(--light);color:var(--navy);font-family:var(--font-b);font-size:16px;line-height:1.6;}
-
-/* ── NAV ── */
 nav{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:3px solid var(--gold);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:58px;}
 .nav-logo{font-family:var(--font-h);font-size:1.6rem;font-weight:800;color:var(--white);letter-spacing:2px;text-decoration:none;}
 .nav-logo .dot{color:var(--gold);}
@@ -24,15 +22,11 @@ nav{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:3px s
 .nav-links li a:hover,.nav-links li a.active{color:var(--white);border-bottom-color:var(--gold);}
 .nav-cta a{background:var(--gold)!important;color:var(--navy)!important;border-radius:4px;margin-left:6px;padding:0 16px!important;height:36px!important;line-height:36px!important;margin-top:11px;border-bottom:none!important;display:inline-block!important;}
 .nav-cta a:hover{background:var(--gold2)!important;}
-
-/* ── TICKER ── */
 .ticker-wrap{background:var(--blue);overflow:hidden;padding:8px 0;border-bottom:2px solid var(--gold);}
 .ticker{display:flex;animation:ticker 36s linear infinite;white-space:nowrap;}
 .ticker-item{font-family:var(--font-h);font-size:.76rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--white);padding:0 48px;}
 .ticker-item::after{content:'◆';margin-left:48px;color:var(--gold);font-size:.5rem;vertical-align:middle;}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* ── HERO ── */
 .page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,var(--blue) 100%);padding:56px 6% 48px;position:relative;overflow:hidden;}
 .page-hero-tag{display:inline-block;background:var(--gold);color:var(--navy);font-family:var(--font-h);font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:4px 14px;border-radius:2px;margin-bottom:16px;}
 .page-hero h1{font-family:var(--font-h);font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800;letter-spacing:1px;line-height:1;color:var(--white);margin-bottom:12px;}
@@ -41,21 +35,15 @@ nav{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:3px s
 .breadcrumb{display:flex;gap:6px;align-items:center;font-size:.76rem;color:rgba(255,255,255,.45);margin-bottom:18px;font-family:var(--font-h);letter-spacing:1px;}
 .breadcrumb a{color:rgba(255,255,255,.55);text-decoration:none;}.breadcrumb a:hover{color:var(--gold);}
 .breadcrumb span{color:rgba(255,255,255,.25);}
-
-/* ── LAYOUT ── */
 .main{max-width:1200px;margin:0 auto;padding:56px 5%;}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .g21{display:grid;grid-template-columns:2fr 1fr;gap:36px;align-items:start;}
 .g12{display:grid;grid-template-columns:1fr 2fr;gap:36px;align-items:start;}
-
-/* ── TYPO ── */
 .lbl{font-family:var(--font-h);font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:8px;display:block;}
 .h2{font-family:var(--font-h);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;color:var(--navy);margin-bottom:6px;line-height:1;}
 .h2 em{color:var(--blue);font-style:normal;}
 .sep{width:40px;height:3px;background:var(--gold);margin:14px 0 28px;border-radius:2px;}
-
-/* ── COMPONENTS ── */
 .card{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;transition:transform .25s,box-shadow .25s;}
 .card:hover{transform:translateY(-3px);box-shadow:var(--shl);}
 .card-body{padding:18px 20px;}
@@ -80,11 +68,21 @@ nav{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:3px s
 .cnums{display:flex;gap:10px;flex-wrap:wrap;}
 .cnum{background:rgba(255,255,255,.12);color:var(--white);padding:9px 16px;border-radius:var(--r);font-family:var(--font-h);font-size:.92rem;font-weight:700;text-decoration:none;transition:background .2s;letter-spacing:.5px;}
 .cnum:hover{background:rgba(255,255,255,.22);}
-.btn{display:inline-block;padding:12px 22px;font-family:var(--font-h);font-size:.85rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:var(--r);transition:background .2s;}
-.btn-dark{background:var(--navy);color:var(--white);}.btn-dark:hover{background:var(--blue);}
-.btn-gold{background:var(--gold);color:var(--navy);}.btn-gold:hover{background:var(--gold2);}
-
-/* ── CONTACT ── */
+.btn{display:inline-block;padding:12px 22px;font-family:var(--font-h);font-size:.85rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:var(--r);transition:all .2s;}
+.btn-dark{background:var(--navy);color:var(--white);}.btn-dark:hover{background:var(--blue);transform:translateY(-2px);}
+.btn-gold{background:var(--gold);color:var(--navy);}.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);}
+.right-card{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);padding:28px 24px;border-left:4px solid var(--blue);transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden;}
+.right-card::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,var(--gold),transparent);transition:left .5s;}
+.right-card:hover{transform:translateX(6px);box-shadow:var(--shl);border-color:var(--gold);}
+.right-card:hover::after{left:100%;}
+.right-card h3{font-family:var(--font-h);font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:6px;letter-spacing:.5px;}
+.right-card p{font-size:.9rem;color:var(--slate);line-height:1.5;}
+.right-card .tag{font-family:var(--font-h);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky);margin-bottom:8px;display:block;}
+.right-card .verdict{display:inline-block;margin-top:10px;background:var(--navy);color:var(--gold);font-family:var(--font-h);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:2px;}
+.countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;}
+.countdown-unit{background:var(--navy);border-radius:var(--r);padding:20px 12px;text-align:center;border-top:3px solid var(--gold);}
+.countdown-num{font-family:var(--font-h);font-size:2.6rem;font-weight:800;color:var(--gold);display:block;line-height:1;}
+.countdown-lbl{font-family:var(--font-h);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px;}
 .rep-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;margin-bottom:32px;}
 .rep-card{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);padding:22px 18px;text-align:center;border-top:3px solid var(--blue);transition:transform .2s,box-shadow .2s;}
 .rep-card:hover{transform:translateY(-3px);box-shadow:var(--shl);}
@@ -93,190 +91,8 @@ nav{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:3px s
 .rep-role{font-size:.76rem;color:var(--slate);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;font-family:var(--font-h);}
 .rep-tel{display:block;background:var(--navy);color:var(--white);padding:9px 14px;border-radius:var(--r);font-family:var(--font-h);font-size:.95rem;font-weight:700;text-decoration:none;transition:background .2s;}
 .rep-tel:hover{background:var(--blue);}
-.bul-wrap{background:var(--white);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;margin-bottom:32px;}
-.bul-head{background:var(--navy);padding:22px 26px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
-.bul-head h3{font-family:var(--font-h);font-size:1.35rem;font-weight:800;color:var(--white);}
-.bul-head p{font-size:.86rem;color:rgba(255,255,255,.7);}
-.btn-dl{background:var(--gold);color:var(--navy);padding:11px 22px;font-family:var(--font-h);font-size:.88rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:var(--r);display:inline-block;white-space:nowrap;}
-.bul-body{display:grid;grid-template-columns:1fr 1fr;gap:0;}
-.bul-info{padding:22px;border-left:1px solid var(--ice);}
-
-/* ── REVEAL ── */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s;}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s;}
 .reveal.in{opacity:1;transform:translateY(0);}
-
-/* ── ANIMATIONS SYNDICALES ── */
-
-/* Poing levé pulsant */
-.anim-fist{
-  display:flex;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,var(--navy) 0%,var(--blue2) 100%);
-  border-radius:var(--r);overflow:hidden;
-  position:relative;min-height:280px;
-}
-.anim-fist svg{width:100%;height:100%;position:absolute;inset:0;}
-
-/* Compteur victoire */
-.anim-victory{
-  background:linear-gradient(135deg,#0d2210,#0a3a14);
-  border-radius:var(--r);padding:40px 28px;text-align:center;
-  position:relative;overflow:hidden;
-}
-.anim-victory .euros{
-  font-family:var(--font-h);font-size:3.5rem;font-weight:800;
-  color:var(--success);display:block;
-  animation:count-up 2s ease-out forwards;
-}
-@keyframes count-up{0%{opacity:0;transform:scale(.5)}60%{transform:scale(1.05)}100%{opacity:1;transform:scale(1)}}
-.anim-victory .label{font-family:var(--font-h);font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:6px;}
-.trophy-bounce{font-size:3rem;animation:bounce 1.2s ease-in-out infinite;}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-
-/* Bouclier protection */
-.anim-shield{
-  background:linear-gradient(135deg,var(--navy),var(--blue2));
-  border-radius:var(--r);display:flex;align-items:center;justify-content:center;
-  min-height:260px;position:relative;overflow:hidden;
-}
-.shield-pulse{
-  width:120px;height:120px;
-  border-radius:50%;
-  border:3px solid var(--gold);
-  animation:shield-ring 2s ease-out infinite;
-  position:absolute;
-}
-.shield-pulse:nth-child(2){animation-delay:.6s;}
-.shield-pulse:nth-child(3){animation-delay:1.2s;}
-@keyframes shield-ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(2.5);opacity:0}}
-
-/* Balance de justice */
-.anim-balance{
-  background:linear-gradient(135deg,#0a0f1e,var(--navy2));
-  border-radius:var(--r);min-height:260px;display:flex;
-  align-items:center;justify-content:center;position:relative;overflow:hidden;
-}
-.balance-arm{
-  transform-origin:center;
-  animation:balance-swing 3s ease-in-out infinite;
-}
-@keyframes balance-swing{
-  0%,100%{transform:rotate(-8deg)}
-  50%{transform:rotate(8deg)}
-}
-
-/* Foule / mains levées */
-.anim-crowd{
-  background:linear-gradient(180deg,#0B1E3D 0%,#0F2850 100%);
-  border-radius:var(--r);min-height:200px;position:relative;overflow:hidden;
-  display:flex;align-items:flex-end;
-}
-
-/* Alerte clignotante */
-.anim-alert-box{
-  background:linear-gradient(135deg,#1a0505,#2d0808);
-  border:2px solid var(--danger);border-radius:var(--r);
-  padding:32px;text-align:center;position:relative;overflow:hidden;
-}
-.anim-alert-box::before{
-  content:'';position:absolute;inset:0;
-  background:rgba(231,76,60,.05);
-  animation:alert-flash 1.5s ease-in-out infinite;
-}
-@keyframes alert-flash{0%,100%{opacity:0}50%{opacity:1}}
-.warning-icon{font-size:3rem;animation:shake .5s ease-in-out infinite;}
-@keyframes shake{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
-
-/* Progression droits */
-.rights-bar{margin-bottom:16px;}
-.rights-bar-label{display:flex;justify-content:space-between;font-family:var(--font-h);font-size:.82rem;font-weight:700;letter-spacing:1px;color:var(--navy);margin-bottom:6px;}
-.rights-bar-track{background:rgba(30,91,168,.1);border-radius:20px;height:10px;overflow:hidden;}
-.rights-bar-fill{height:100%;background:linear-gradient(to right,var(--blue),var(--sky));border-radius:20px;width:0;transition:width 1.5s ease;}
-.rights-bar-fill.in{width:var(--w);}
-
-/* Texte animé hero */
-.hero-animated-words{
-  font-family:var(--font-h);font-size:1.4rem;font-weight:700;
-  color:var(--gold);letter-spacing:2px;text-transform:uppercase;
-  height:2rem;overflow:hidden;display:inline-block;vertical-align:bottom;
-}
-.hero-animated-words span{
-  display:block;
-  animation:word-slide 8s linear infinite;
-}
-@keyframes word-slide{
-  0%,20%{transform:translateY(0)}
-  25%,45%{transform:translateY(-2rem)}
-  50%,70%{transform:translateY(-4rem)}
-  75%,95%{transform:translateY(-6rem)}
-  100%{transform:translateY(-8rem)}
-}
-
-/* Particules flottantes */
-.particles{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
-.particle{
-  position:absolute;
-  width:4px;height:4px;
-  background:var(--gold);
-  border-radius:50%;
-  opacity:0;
-  animation:float-up var(--dur) var(--delay) linear infinite;
-}
-@keyframes float-up{
-  0%{transform:translateY(100%) translateX(0);opacity:0}
-  10%{opacity:.6}
-  90%{opacity:.3}
-  100%{transform:translateY(-100px) translateX(var(--drift));opacity:0}
-}
-
-/* Carte droit animée */
-.right-card{
-  background:var(--white);border-radius:var(--r);
-  box-shadow:var(--sh);padding:28px 24px;
-  border-left:4px solid var(--blue);
-  transition:transform .3s,box-shadow .3s,border-color .3s;
-  position:relative;overflow:hidden;
-}
-.right-card::after{
-  content:'';position:absolute;top:0;left:-100%;width:100%;height:3px;
-  background:linear-gradient(to right,transparent,var(--gold),transparent);
-  transition:left .5s;
-}
-.right-card:hover{transform:translateX(6px);box-shadow:var(--shl);border-color:var(--gold);}
-.right-card:hover::after{left:100%;}
-.right-card h3{font-family:var(--font-h);font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:6px;letter-spacing:.5px;}
-.right-card p{font-size:.9rem;color:var(--slate);line-height:1.5;}
-.right-card .tag{font-family:var(--font-h);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sky);margin-bottom:8px;display:block;}
-.right-card .verdict{
-  display:inline-block;margin-top:10px;
-  background:var(--navy);color:var(--gold);
-  font-family:var(--font-h);font-size:.72rem;font-weight:700;
-  letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:2px;
-}
-
-/* Countdown élections */
-.countdown-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
-  margin-bottom:28px;
-}
-.countdown-unit{
-  background:var(--navy);border-radius:var(--r);padding:20px 12px;
-  text-align:center;border-top:3px solid var(--gold);
-}
-.countdown-num{
-  font-family:var(--font-h);font-size:2.6rem;font-weight:800;
-  color:var(--gold);display:block;line-height:1;
-}
-.countdown-lbl{font-family:var(--font-h);font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px;}
-
-/* Poing animé SVG inline */
-.fist-anim{animation:fist-pump 1.5s ease-in-out infinite;}
-@keyframes fist-pump{
-  0%,100%{transform:translateY(0)}
-  40%{transform:translateY(-14px)}
-  60%{transform:translateY(-8px)}
-}
-
-/* ── FOOTER ── */
 footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 28px;text-align:center;margin-top:72px;}
 .foot-logo{font-family:var(--font-h);font-size:2rem;font-weight:800;color:var(--white);letter-spacing:3px;margin-bottom:6px;}
 .foot-logo .dot{color:var(--gold);}
@@ -286,20 +102,425 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
 .foot-nav li:last-child a{border-right:none;}
 .foot-nav a:hover{color:var(--gold);}
 .foot-copy{font-size:.76rem;color:rgba(255,255,255,.22);margin-top:12px;}
+.rights-bar{margin-bottom:18px;}
+.rights-bar-label{display:flex;justify-content:space-between;font-family:var(--font-h);font-size:.82rem;font-weight:700;letter-spacing:1px;color:var(--navy);margin-bottom:6px;}
+.rights-bar-track{background:rgba(30,91,168,.1);border-radius:20px;height:10px;overflow:hidden;}
+.rights-bar-fill{height:100%;background:linear-gradient(to right,var(--blue),var(--sky));border-radius:20px;width:0;transition:width 1.8s cubic-bezier(.4,0,.2,1);}
+@media(max-width:900px){.g2,.g21,.g12{grid-template-columns:1fr;}.g3{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.stats{grid-template-columns:1fr 1fr;}.countdown-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.g3{grid-template-columns:1fr;}.stats{grid-template-columns:1fr;}.cbar{flex-direction:column;}.rep-grid{grid-template-columns:1fr 1fr;}}
 
-@media(max-width:900px){
-  .g2,.g21,.g12,.bul-body{grid-template-columns:1fr;}
-  .g3{grid-template-columns:1fr 1fr;}
-  .nav-links{display:none;}
-  .stats{grid-template-columns:1fr 1fr;}
-  .countdown-grid{grid-template-columns:repeat(2,1fr);}
+/* ─── HERO SCÈNE PRINCIPALE (INDEX) ─── */
+.hero-scene {
+  position:relative; border-radius:12px; overflow:hidden;
+  background:#050d1a; min-height:380px;
+  display:flex; align-items:center; justify-content:center;
 }
-@media(max-width:600px){
-  .g3{grid-template-columns:1fr;}
-  .stats{grid-template-columns:1fr;}
-  .cbar{flex-direction:column;}
-  .rep-grid{grid-template-columns:1fr 1fr;}
+/* Grille de fond */
+.hero-scene::before {
+  content:''; position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(46,134,193,.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46,134,193,.15) 1px, transparent 1px);
+  background-size:40px 40px;
+  animation:grid-scroll 12s linear infinite;
 }
+@keyframes grid-scroll { to { background-position:0 40px; } }
+/* Lueur centrale */
+.hero-scene::after {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 60% 50% at 50% 60%, rgba(201,168,76,.12), transparent 70%);
+  pointer-events:none;
+}
+
+/* Poing 3D impressionnant */
+.fist-wrap {
+  position:relative; z-index:2; text-align:center;
+}
+.fist-svg {
+  width:180px; height:180px;
+  filter:drop-shadow(0 0 30px rgba(201,168,76,.5));
+  animation:fist-rise 3s cubic-bezier(.22,1,.36,1) forwards,
+            fist-pulse 2s ease-in-out 3s infinite;
+  transform:translateY(40px); opacity:0;
+}
+@keyframes fist-rise {
+  to { transform:translateY(0); opacity:1; }
+}
+@keyframes fist-pulse {
+  0%,100% { transform:translateY(0) scale(1); filter:drop-shadow(0 0 30px rgba(201,168,76,.5)); }
+  50% { transform:translateY(-10px) scale(1.04); filter:drop-shadow(0 0 50px rgba(201,168,76,.8)); }
+}
+
+/* Texte appel */
+.hero-call {
+  font-family:var(--font-h); font-weight:900; font-size:clamp(1.6rem,3vw,2.4rem);
+  letter-spacing:3px; text-transform:uppercase;
+  background:linear-gradient(135deg,#fff 30%,var(--gold));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:text-in 1s 1s ease both;
+}
+@keyframes text-in { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }
+
+.hero-sub {
+  font-family:var(--font-h); font-size:.8rem; font-weight:700;
+  letter-spacing:4px; text-transform:uppercase;
+  color:rgba(255,255,255,.45); margin-top:6px;
+  animation:text-in 1s 1.3s ease both;
+}
+
+/* Éclairs / impact lines */
+.impact-lines { position:absolute; inset:0; pointer-events:none; z-index:1; }
+.impact-line {
+  position:absolute; top:50%; left:50%;
+  width:2px; background:linear-gradient(to bottom, var(--gold), transparent);
+  transform-origin:top center;
+  animation:impact-shoot 2s ease-out infinite;
+  opacity:0;
+}
+@keyframes impact-shoot {
+  0%   { opacity:0; height:0; }
+  20%  { opacity:.8; height:80px; }
+  60%  { opacity:.3; height:120px; }
+  100% { opacity:0; height:160px; }
+}
+
+/* Particules dorées */
+.particle-field { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+.pt {
+  position:absolute; border-radius:50%;
+  background:var(--gold); opacity:0;
+  animation:pt-float var(--d) var(--del) ease-in infinite;
+}
+@keyframes pt-float {
+  0%   { opacity:0; transform:translateY(100%) translateX(0) scale(0); }
+  15%  { opacity:.7; }
+  85%  { opacity:.2; }
+  100% { opacity:0; transform:translateY(-80px) translateX(var(--dx)) scale(1); }
+}
+
+/* ─── BARRE DE STATS ANIMÉE ─── */
+.stats-hero {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  background:var(--navy); border-radius:12px; overflow:hidden;
+  margin-bottom:36px; border:1px solid rgba(201,168,76,.2);
+  box-shadow:0 8px 40px rgba(11,30,61,.3);
+}
+.stat-hero { padding:32px 20px; text-align:center; border-right:1px solid rgba(255,255,255,.06); position:relative; overflow:hidden; }
+.stat-hero:last-child { border-right:none; }
+.stat-hero::before {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:2px;
+  background:var(--gold); transform:scaleX(0); transform-origin:left;
+  transition:transform 1.2s ease;
+}
+.stat-hero.in::before { transform:scaleX(1); }
+.stat-hero-n {
+  font-family:var(--font-h); font-size:2.8rem; font-weight:900;
+  color:var(--gold); display:block; letter-spacing:1px; line-height:1;
+}
+.stat-hero-l {
+  font-family:var(--font-h); font-size:.7rem; font-weight:600;
+  letter-spacing:2.5px; text-transform:uppercase;
+  color:rgba(255,255,255,.5); margin-top:8px;
+}
+
+/* ─── ALERTE URGENTE ─── */
+.danger-banner {
+  position:relative; border-radius:10px; overflow:hidden;
+  background:linear-gradient(135deg,#0f0505,#1a0808,#0f0505);
+  border:1px solid rgba(231,76,60,.3); padding:36px 40px;
+  display:flex; gap:32px; align-items:center;
+}
+.danger-banner::before {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(135deg, rgba(231,76,60,.05), transparent 60%);
+  animation:danger-pulse 2s ease-in-out infinite;
+}
+@keyframes danger-pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
+.danger-icon-wrap {
+  flex-shrink:0; width:80px; height:80px; border-radius:50%;
+  background:rgba(231,76,60,.15); border:2px solid rgba(231,76,60,.4);
+  display:flex; align-items:center; justify-content:center;
+  font-size:2.2rem; position:relative; z-index:1;
+  animation:danger-shake 3s ease-in-out infinite;
+}
+@keyframes danger-shake {
+  0%,90%,100% { transform:rotate(0); }
+  92% { transform:rotate(-8deg); }
+  96% { transform:rotate(8deg); }
+}
+/* Anneau qui se propage */
+.danger-ring {
+  position:absolute; inset:-2px; border-radius:50%;
+  border:2px solid rgba(231,76,60,.6);
+  animation:ring-expand 2s ease-out infinite;
+}
+@keyframes ring-expand { to { transform:scale(2); opacity:0; } }
+.danger-text { position:relative; z-index:1; }
+.danger-text h3 {
+  font-family:var(--font-h); font-size:1.8rem; font-weight:900;
+  color:#E74C3C; letter-spacing:2px; text-transform:uppercase;
+  margin-bottom:8px; line-height:1;
+}
+.danger-text p { font-size:.92rem; color:rgba(255,255,255,.72); line-height:1.7; }
+.danger-text strong { color:var(--gold); }
+/* Liste attaques animée */
+.attack-list { list-style:none; margin-top:14px; display:grid; gap:6px; }
+.attack-list li {
+  display:flex; align-items:center; gap:10px;
+  font-size:.88rem; color:rgba(255,255,255,.65);
+  padding:6px 10px; border-radius:4px;
+  background:rgba(231,76,60,.06); border-left:2px solid rgba(231,76,60,.4);
+}
+.attack-list li::before { content:'✕'; color:#E74C3C; font-weight:900; font-size:.7rem; }
+
+/* ─── FOULE ÉPIQUE ─── */
+.crowd-scene {
+  position:relative; border-radius:12px; overflow:hidden;
+  background:linear-gradient(180deg,#040d1a 0%,#0b1e3d 50%,#0f2850 100%);
+  min-height:280px;
+}
+/* Lumière de scène */
+.crowd-scene::before {
+  content:''; position:absolute; top:0; left:50%; transform:translateX(-50%);
+  width:60%; height:100%;
+  background:radial-gradient(ellipse at 50% 0%, rgba(201,168,76,.2) 0%, transparent 70%);
+}
+
+/* ─── ANIMATION BALANCE ─── */
+.justice-scene {
+  position:relative; border-radius:12px; overflow:hidden;
+  background:linear-gradient(135deg,#040810,#0B1E3D,#0a1428);
+  min-height:300px; display:flex; align-items:center; justify-content:center;
+}
+.justice-scene::before {
+  content:'JUSTICE';
+  position:absolute; font-family:var(--font-h); font-size:8rem; font-weight:900;
+  color:rgba(201,168,76,.04); letter-spacing:10px;
+  top:50%; left:50%; transform:translate(-50%,-50%);
+  pointer-events:none; white-space:nowrap;
+}
+
+/* ─── BOUCLIER PROTECTEUR ─── */
+.shield-scene {
+  position:relative; border-radius:12px; overflow:hidden;
+  background:linear-gradient(135deg,#040d1a,#0b1e3d,#0f2850);
+  min-height:300px; display:flex; align-items:center; justify-content:center;
+}
+/* Ondes de protection */
+.shield-wave {
+  position:absolute; border-radius:50%;
+  border:1.5px solid rgba(201,168,76,.35);
+  animation:wave-expand 3s ease-out infinite;
+}
+.shield-wave:nth-child(2) { animation-delay:1s; }
+.shield-wave:nth-child(3) { animation-delay:2s; }
+@keyframes wave-expand {
+  0%   { width:80px; height:80px; opacity:.8; }
+  100% { width:400px; height:400px; opacity:0; }
+}
+
+/* ─── VICTOIRE ─── */
+.victory-scene {
+  position:relative; border-radius:12px; overflow:hidden;
+  background:linear-gradient(135deg,#040d08,#0a1e10,#0d2614);
+  padding:44px 36px; text-align:center;
+}
+.victory-scene::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 40%, rgba(39,174,96,.12), transparent);
+}
+.trophy-wrap {
+  font-size:5rem; display:block; position:relative; z-index:1;
+  animation:trophy-entrance 1s cubic-bezier(.34,1.56,.64,1) forwards;
+  transform:scale(0); opacity:0;
+}
+@keyframes trophy-entrance { to { transform:scale(1); opacity:1; } }
+.victory-main-num {
+  font-family:var(--font-h); font-size:4.5rem; font-weight:900;
+  line-height:1; display:block; position:relative; z-index:1;
+  background:linear-gradient(135deg,#2ECC71,#27AE60);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+.victory-label {
+  font-family:var(--font-h); font-size:.8rem; font-weight:700;
+  letter-spacing:3px; text-transform:uppercase;
+  color:rgba(255,255,255,.45); margin:8px 0 24px; position:relative; z-index:1;
+}
+.victory-sub-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:12px; position:relative; z-index:1;
+}
+.victory-sub {
+  background:rgba(255,255,255,.06); border:1px solid rgba(39,174,96,.2);
+  border-radius:8px; padding:16px 12px; text-align:center;
+}
+.victory-sub-num {
+  font-family:var(--font-h); font-size:1.8rem; font-weight:800;
+  color:#2ECC71; display:block; line-height:1;
+}
+.victory-sub-lbl {
+  font-family:var(--font-h); font-size:.62rem; letter-spacing:2px;
+  text-transform:uppercase; color:rgba(255,255,255,.4); margin-top:4px;
+}
+/* Confettis */
+.confetti-piece {
+  position:absolute; width:8px; height:8px; border-radius:2px; opacity:0;
+  animation:confetti-fall var(--d) var(--del) ease-in infinite;
+}
+@keyframes confetti-fall {
+  0%   { opacity:1; transform:translateY(-20px) rotate(0deg); }
+  100% { opacity:0; transform:translateY(300px) rotate(720deg); }
+}
+
+/* ─── COUNTDOWN DRAMATIQUE ─── */
+.cd-wrap {
+  background:linear-gradient(135deg,var(--navy),#0d1f3d);
+  border-radius:12px; padding:36px; border:1px solid rgba(201,168,76,.15);
+  position:relative; overflow:hidden;
+}
+.cd-wrap::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(to right,var(--gold),var(--sky),var(--gold));
+  background-size:200% 100%;
+  animation:shimmer 3s linear infinite;
+}
+@keyframes shimmer { to { background-position:-200% 0; } }
+.cd-grid {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:14px;
+}
+.cd-unit {
+  background:rgba(0,0,0,.3); border-radius:8px; padding:24px 12px;
+  text-align:center; border:1px solid rgba(201,168,76,.12);
+  position:relative; overflow:hidden;
+}
+.cd-unit::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(201,168,76,.04),transparent);
+}
+.cd-num {
+  font-family:var(--font-h); font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:900; color:var(--gold); display:block; line-height:1;
+  text-shadow:0 0 30px rgba(201,168,76,.5);
+}
+.cd-lbl {
+  font-family:var(--font-h); font-size:.62rem; letter-spacing:2.5px;
+  text-transform:uppercase; color:rgba(255,255,255,.4); margin-top:6px;
+}
+.cd-heading {
+  font-family:var(--font-h); font-size:clamp(1.4rem,2.5vw,2rem); font-weight:900;
+  color:#fff; letter-spacing:2px; text-align:center; margin-bottom:24px;
+}
+.cd-heading em { color:var(--gold); font-style:normal; }
+.cd-sub {
+  text-align:center; margin-top:20px;
+  font-family:var(--font-h); font-size:.8rem; letter-spacing:3px;
+  text-transform:uppercase; color:rgba(255,255,255,.35);
+}
+
+/* ─── DROITS BARS ─── */
+.rights-panel {
+  background:var(--white); border-radius:12px; box-shadow:var(--shl);
+  padding:32px 28px; border-top:4px solid var(--blue);
+}
+.rights-panel-title {
+  font-family:var(--font-h); font-size:1.3rem; font-weight:800;
+  color:var(--navy); margin-bottom:6px; letter-spacing:.5px;
+}
+.rights-panel-sub {
+  font-size:.82rem; color:var(--slate); margin-bottom:24px;
+}
+.rights-bar { margin-bottom:20px; }
+.rb-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.rb-label { font-family:var(--font-h); font-size:.88rem; font-weight:700; color:var(--navy); letter-spacing:.5px; }
+.rb-badge { font-family:var(--font-h); font-size:.65rem; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; background:rgba(39,174,96,.12); color:#27AE60; padding:3px 10px; border-radius:20px; border:1px solid rgba(39,174,96,.3); }
+.rb-ref { font-size:.75rem; color:var(--slate); margin-bottom:8px; }
+.rb-track { background:rgba(30,91,168,.08); border-radius:20px; height:12px; overflow:hidden; }
+.rb-fill { height:100%; background:linear-gradient(to right,var(--blue),var(--sky2)); border-radius:20px; width:0; transition:width 2s cubic-bezier(.4,0,.2,1); box-shadow:0 0 8px rgba(46,134,193,.4); }
+
+/* ─── SANTÉ SCÈNE ─── */
+.health-timeline {
+  background:var(--navy); border-radius:12px; padding:36px 32px;
+  position:relative; overflow:hidden;
+}
+.health-timeline::before {
+  content:''; position:absolute; left:52px; top:60px; bottom:32px;
+  width:2px; background:linear-gradient(to bottom,var(--gold),var(--sky),transparent);
+}
+.timeline-step {
+  display:flex; gap:24px; align-items:flex-start;
+  margin-bottom:28px; position:relative; z-index:1;
+}
+.timeline-step:last-child { margin-bottom:0; }
+.ts-icon {
+  width:40px; height:40px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:1.1rem; font-weight:800;
+  background:var(--blue); border:2px solid var(--gold);
+  font-family:var(--font-h); color:var(--gold);
+  box-shadow:0 0 12px rgba(201,168,76,.3);
+}
+.ts-content {}
+.ts-title { font-family:var(--font-h); font-size:1rem; font-weight:800; color:#fff; letter-spacing:.5px; margin-bottom:4px; }
+.ts-desc { font-size:.86rem; color:rgba(255,255,255,.6); line-height:1.5; }
+.ts-badge { display:inline-block; margin-top:6px; background:rgba(201,168,76,.15); border:1px solid rgba(201,168,76,.3); color:var(--gold); font-family:var(--font-h); font-size:.65rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 10px; border-radius:2px; }
+
+/* ─── HARCÈLEMENT SCÈNE ─── */
+.harcel-scene {
+  background:linear-gradient(135deg,#0f0010,#150020,#0a0015);
+  border-radius:12px; padding:36px 32px;
+  border:1px solid rgba(180,0,180,.15); position:relative; overflow:hidden;
+}
+.harcel-scene::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 50% 40% at 50% 50%, rgba(180,0,180,.06), transparent);
+  animation:harcel-pulse 3s ease-in-out infinite;
+}
+@keyframes harcel-pulse { 0%,100%{opacity:.5} 50%{opacity:1} }
+.harcel-title { font-family:var(--font-h); font-size:1.6rem; font-weight:900; color:#E74C3C; letter-spacing:2px; text-transform:uppercase; margin-bottom:20px; position:relative; z-index:1; }
+.harcel-item { display:flex; gap:14px; align-items:flex-start; margin-bottom:16px; position:relative; z-index:1; }
+.harcel-dot { width:10px; height:10px; border-radius:50%; background:#E74C3C; flex-shrink:0; margin-top:6px; box-shadow:0 0 8px rgba(231,76,60,.5); animation:dot-blink 2s ease-in-out infinite; }
+@keyframes dot-blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.harcel-item-title { font-family:var(--font-h); font-size:1rem; font-weight:800; color:#fff; margin-bottom:4px; }
+.harcel-item-desc { font-size:.86rem; color:rgba(255,255,255,.55); line-height:1.5; }
+
+/* ─── CHOC ÉMOTIONNEL ─── */
+.choc-meter {
+  background:var(--navy); border-radius:12px; padding:32px; overflow:hidden; position:relative;
+}
+.choc-meter::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right,transparent,var(--sky),transparent); animation:shimmer 4s linear infinite; }
+.choc-gauge-wrap { display:flex; flex-direction:column; gap:16px; }
+.choc-gauge { position:relative; }
+.choc-gauge-label { display:flex; justify-content:space-between; font-family:var(--font-h); font-size:.82rem; font-weight:700; color:rgba(255,255,255,.7); margin-bottom:8px; letter-spacing:.5px; }
+.choc-gauge-pct { color:var(--sky); }
+.choc-track { background:rgba(255,255,255,.06); border-radius:20px; height:14px; overflow:hidden; }
+.choc-fill { height:100%; border-radius:20px; width:0; transition:width 2s cubic-bezier(.4,0,.2,1); }
+.choc-fill-1 { background:linear-gradient(to right,#E74C3C,#c0392b); box-shadow:0 0 10px rgba(231,76,60,.4); }
+.choc-fill-2 { background:linear-gradient(to right,#E67E22,#d35400); box-shadow:0 0 10px rgba(230,126,34,.4); }
+.choc-fill-3 { background:linear-gradient(to right,var(--sky),var(--blue2)); box-shadow:0 0 10px rgba(46,134,193,.4); }
+.choc-fill-4 { background:linear-gradient(to right,#9B59B6,#8E44AD); box-shadow:0 0 10px rgba(155,89,182,.4); }
+
+@media(max-width:900px) {
+  .danger-banner { flex-direction:column; padding:28px 24px; }
+  .cd-grid { grid-template-columns:repeat(2,1fr); }
+  .victory-sub-grid { grid-template-columns:1fr; }
+}
+
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes reveal-up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fist-pump{0%,100%{transform:translateY(0) rotate(-2deg)}45%{transform:translateY(-18px) rotate(2deg)}}
+@keyframes ring-out{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+@keyframes flash-bar{0%,100%{opacity:1}50%{opacity:.6}}
+@keyframes counter-in{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+@keyframes slide-words{0%,18%{transform:translateY(0)}25%,43%{transform:translateY(-2.4rem)}50%,68%{transform:translateY(-4.8rem)}75%,93%{transform:translateY(-7.2rem)}100%{transform:translateY(-9.6rem)}}
+@keyframes float-particle{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:.7}90%{opacity:.3}100%{transform:translateY(-80px) translateX(var(--dx));opacity:0}}
+@keyframes crowd-arm{0%,100%{transform:translateY(0)}50%{transform:translateY(var(--lift))}}
+@keyframes bar-fill{from{width:0}to{width:var(--w)}}
+@keyframes pulse-icon{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@keyframes cd-flip{0%{transform:rotateX(0)}50%{transform:rotateX(90deg)}51%{transform:rotateX(-90deg)}100%{transform:rotateX(0)}}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s;}
+.reveal.in{opacity:1;transform:translateY(0);}
 </style></head>
 <body><nav><a class="nav-logo" href="index.html">FMPS<span class="dot">-i</span></a><ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="droits.html" class="active">Vos Droits</a></li><li><a href="sante.html">Santé & Sécurité</a></li><li><a href="elections.html">Élections 2026</a></li><li><a href="victoires.html">Nos Victoires</a></li><li class="nav-cta"><a href="contact.html">Contact</a></li></ul></nav><div class="ticker-wrap"><div class="ticker">
   <span class="ticker-item">Arrêt maladie : vos droits sont protégés</span>
@@ -317,176 +538,160 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
   <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span>Vos Droits</div>
   <span class="page-hero-tag">Informations Juridiques</span>
   <h1>Vos droits <em>clairement</em><br>expliqués</h1>
-  <p>Chaque fiche est basée sur des arrêts réels de la Cour de cassation.</p>
+  <p>Basé sur les arrêts réels de la Cour de cassation — connaître vos droits, c'est les défendre.</p>
 </section>
 <div class="main">
-
   <div class="g12 reveal" style="margin-bottom:52px;align-items:center">
-    <div class="anim-balance" style="min-height:280px">
-  <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0">
+    
+<div style="background:linear-gradient(160deg,#050d1c 0%,#0a1a35 50%,#0f2850 100%);border-radius:10px;overflow:hidden;min-height:380px;position:relative">
+  <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
     <defs>
-      <radialGradient id="glow2" cx="50%" cy="40%" r="50%">
-        <stop offset="0%" stop-color="#1E5BA8" stop-opacity=".4"/>
-        <stop offset="100%" stop-color="#0B1E3D" stop-opacity="0"/>
+      <radialGradient id="bg2" cx="50%" cy="80%" r="60%">
+        <stop offset="0%" stop-color="#C9A84C" stop-opacity=".12"/>
+        <stop offset="100%" stop-color="transparent"/>
       </radialGradient>
     </defs>
-    <rect width="400" height="280" fill="#0B1E3D"/>
-    <circle cx="200" cy="130" r="100" fill="url(#glow2)"/>
-    <!-- Pillar -->
-    <rect x="196" y="80" width="8" height="140" fill="#C9A84C" rx="2"/>
-    <rect x="170" y="215" width="60" height="10" fill="#C9A84C" rx="3"/>
-    <!-- Arm -->
-    <g class="balance-arm">
-      <rect x="80" y="95" width="240" height="6" rx="3" fill="#E8C765"/>
-      <!-- Left pan -->
-      <line x1="100" y1="101" x2="80" y2="140" stroke="#E8C765" stroke-width="2"/>
-      <line x1="120" y1="101" x2="140" y2="140" stroke="#E8C765" stroke-width="2"/>
-      <rect x="70" y="140" width="80" height="10" rx="5" fill="#1A4A8A"/>
-      <text x="110" y="135" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="9" fill="#E8C765" font-weight="700">VOS DROITS</text>
-      <!-- Right pan -->
-      <line x1="280" y1="101" x2="260" y2="140" stroke="#E8C765" stroke-width="2"/>
-      <line x1="300" y1="101" x2="320" y2="140" stroke="#E8C765" stroke-width="2"/>
-      <rect x="250" y="140" width="80" height="10" rx="5" fill="#922B21"/>
-      <text x="290" y="135" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="9" fill="#E8C765" font-weight="700">INJUSTICE</text>
+    <rect width="700" height="380" fill="url(#bg2)"/>
+    <!-- Titre -->
+    <text x="350" y="38" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,.45)" letter-spacing="4">LA JUSTICE TRAVAILLE POUR VOUS</text>
+    <!-- Pilier central -->
+    <rect x="345" y="80" width="10" height="220" rx="3" fill="#C9A84C" opacity=".8"/>
+    <ellipse cx="350" cy="80" rx="12" ry="8" fill="#E8C765"/>
+    <!-- Base -->
+    <rect x="290" y="300" width="120" height="14" rx="5" fill="#C9A84C" opacity=".7"/>
+    <rect x="310" y="314" width="80" height="8" rx="3" fill="#C9A84C" opacity=".4"/>
+    <!-- BRAS oscillant -->
+    <g style="animation:balance-swing 3.5s ease-in-out infinite;transform-origin:350px 80px">
+      <!-- bras gauche -->
+      <line x1="350" y1="80" x2="140" y2="110" stroke="#E8C765" stroke-width="4" stroke-linecap="round"/>
+      <!-- bras droit -->
+      <line x1="350" y1="80" x2="560" y2="110" stroke="#E8C765" stroke-width="4" stroke-linecap="round"/>
+      <!-- cordons gauche -->
+      <line x1="140" y1="110" x2="110" y2="180" stroke="#C9A84C" stroke-width="2"/>
+      <line x1="140" y1="110" x2="170" y2="180" stroke="#C9A84C" stroke-width="2"/>
+      <!-- plateau gauche — VOS DROITS -->
+      <rect x="90" y="180" width="100" height="52" rx="8" fill="#1A4A8A"/>
+      <text x="140" y="202" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="13" font-weight="800" fill="white" letter-spacing="1">VOS DROITS</text>
+      <text x="140" y="222" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="10" fill="rgba(255,255,255,.65)" letter-spacing="1">PROTÉGÉS PAR LA LOI</text>
+      <!-- cordons droite -->
+      <line x1="560" y1="110" x2="530" y2="180" stroke="#C9A84C" stroke-width="2"/>
+      <line x1="560" y1="110" x2="590" y2="180" stroke="#C9A84C" stroke-width="2"/>
+      <!-- plateau droit — INJUSTICE -->
+      <rect x="510" y="180" width="100" height="52" rx="8" fill="#7B2020"/>
+      <text x="560" y="202" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="13" font-weight="800" fill="white" letter-spacing="1">INJUSTICE</text>
+      <text x="560" y="222" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="10" fill="rgba(255,255,255,.6)" letter-spacing="1">COMBATTUE</text>
     </g>
-    <text x="200" y="255" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="16" font-weight="800" fill="#C9A84C" letter-spacing="2">LA JUSTICE PENCHE POUR VOUS</text>
+    <!-- Icônes dans plateaux (statiques) -->
+    <text x="140" y="168" text-anchor="middle" font-size="20" fill="#E8C765">⚖</text>
+    <text x="560" y="168" text-anchor="middle" font-size="20" fill="rgba(255,100,100,.8)">✕</text>
+    <!-- Légende bas -->
+    <text x="350" y="360" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="12" fill="rgba(255,255,255,.35)" letter-spacing="2">FMPS-i — UN SYNDICAT QUI DÉFEND VRAIMENT</text>
   </svg>
 </div>
     <div>
       <span class="lbl">Arrêt Maladie</span><h2 class="h2">Vos droits lors d'un <em>arrêt maladie</em></h2><div class="sep"></div>
       <div class="box"><h4>⚖️ Cass. — 1er oct. 2025 (n° 24-15.529)</h4><p>Les arrêts maladie <strong>ne peuvent pas être déduits</strong> de l'ancienneté pour le calcul des indemnités de licenciement.</p></div>
-      <div class="box"><h4>✅ Concrètement</h4><ul><li>Ancienneté de <strong>l'embauche à la fin du contrat</strong></li><li>L'employeur <strong>ne peut pas déduire</strong> l'arrêt maladie</li><li>Indemnités calculées sur le barème légal intégral</li></ul></div>
-      <div class="box"><h4>🔒 Secret médical absolu</h4><ul><li>L'employeur <strong>ne peut pas</strong> contacter votre médecin</li><li>Ni obtenir des informations sur votre arrêt</li><li>Ni utiliser ces infos pour vous licencier</li></ul></div>
+      <div class="box"><h4>🔒 Secret médical absolu</h4><ul><li>L'employeur <strong>ne peut pas</strong> contacter votre médecin</li><li>Ni obtenir des informations sur votre arrêt</li><li>Ni utiliser ces infos pour vous licencier — Cass. 10 déc. 2025</li></ul></div>
     </div>
   </div>
-
-  <div class="reveal" style="margin-bottom:52px"><div style="background:var(--white);border-radius:var(--r);box-shadow:var(--sh);padding:28px 24px">
-  <div style="font-family:var(--font-h);font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--sky);margin-bottom:20px">Vos droits reconnus par la jurisprudence</div>
-  <div class="rights-bar">
-    <div class="rights-bar-label"><span>Arrêt maladie & ancienneté</span><span style="color:var(--success)">✓ Protégé</span></div>
-    <div class="rights-bar-track"><div class="rights-bar-fill" data-w="95%"></div></div>
-  </div>
-  <div class="rights-bar">
-    <div class="rights-bar-label"><span>Congés payés en arrêt maladie</span><span style="color:var(--success)">✓ Reconnu</span></div>
-    <div class="rights-bar-track"><div class="rights-bar-fill" data-w="90%"></div></div>
-  </div>
-  <div class="rights-bar">
-    <div class="rights-bar-label"><span>Choc émotionnel = AT</span><span style="color:var(--success)">✓ Reconnu</span></div>
-    <div class="rights-bar-track"><div class="rights-bar-fill" data-w="88%"></div></div>
-  </div>
-  <div class="rights-bar">
-    <div class="rights-bar-label"><span>Harcèlement managérial</span><span style="color:var(--success)">✓ Sanctionné</span></div>
-    <div class="rights-bar-track"><div class="rights-bar-fill" data-w="85%"></div></div>
-  </div>
-  <div class="rights-bar">
-    <div class="rights-bar-label"><span>Sanction pécuniaire interdite</span><span style="color:var(--success)">✓ Illégal</span></div>
-    <div class="rights-bar-track"><div class="rights-bar-fill" data-w="100%"></div></div>
-  </div>
+  <div class="reveal" style="margin-bottom:48px">
+<div style="background:white;border-radius:10px;box-shadow:0 4px 24px rgba(11,30,61,.1);padding:32px 28px">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E86C1;margin-bottom:24px">Vos droits reconnus — Cour de cassation</div>
+  <style>
+  .rb{margin-bottom:18px}
+  .rb-top{display:flex;justify-content:space-between;font-family:Barlow Condensed,sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.5px;color:#0B1E3D;margin-bottom:7px}
+  .rb-ok{color:#27AE60;font-size:.75rem}
+  .rb-track{background:rgba(30,91,168,.08);border-radius:20px;height:12px;overflow:hidden}
+  .rights-fill{height:100%;background:linear-gradient(to right,#1A4A8A,#2E86C1);border-radius:20px;width:0;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+  </style>
+  <div class="rb"><div class="rb-top"><span>Arrêt maladie & ancienneté</span><span class="rb-ok">✓ Protégé — Cass. oct. 2025</span></div><div class="rb-track"><div class="rights-fill" data-w="96%"></div></div></div>
+  <div class="rb"><div class="rb-top"><span>Congés payés en arrêt maladie</span><span class="rb-ok">✓ Reconnu — Réforme 2024</span></div><div class="rb-track"><div class="rights-fill" data-w="92%"></div></div></div>
+  <div class="rb"><div class="rb-top"><span>Choc émotionnel = accident du travail</span><span class="rb-ok">✓ Cass. oct. 2023</span></div><div class="rb-track"><div class="rights-fill" data-w="89%"></div></div></div>
+  <div class="rb"><div class="rb-top"><span>Harcèlement managérial collectif</span><span class="rb-ok">✓ Cass. déc. 2025</span></div><div class="rb-track"><div class="rights-fill" data-w="86%"></div></div></div>
+  <div class="rb"><div class="rb-top"><span>Sanction pécuniaire interdite</span><span class="rb-ok">✓ Cass. jan. 2026</span></div><div class="rb-track"><div class="rights-fill" data-w="100%"></div></div></div>
+  <div class="rb" style="margin:0"><div class="rb-top"><span>Congés payés & heures supplémentaires</span><span class="rb-ok">✓ Cass. jan. 2026</span></div><div class="rb-track"><div class="rights-fill" data-w="91%"></div></div></div>
 </div></div>
-
   <div class="g3 reveal" style="margin-bottom:52px">
-    <div class="right-card">
-      <span class="tag">Congés Payés</span>
-      <h3>Arrêt maladie → CP acquis</h3>
-      <p>Même en arrêt, vous continuez d'acquérir des congés payés. Non professionnel : 2 j/mois. Professionnel : 2,5 j/mois.</p>
-      <span class="verdict">Réforme 22 avril</span>
-    </div>
-    <div class="right-card">
-      <span class="tag">Acompte sur Salaire</span>
-      <h3>L'employeur ne peut pas refuser</h3>
-      <p>L'acompte porte sur du travail déjà effectué. L'employeur est <strong>obligé</strong> d'accorder la 1ère demande du mois.</p>
-      <span class="verdict">Droit absolu</span>
-    </div>
-    <div class="right-card">
-      <span class="tag">Bulletin de Salaire</span>
-      <h3>Rectification encadrée</h3>
-      <p>L'employeur ne peut pas diminuer un salaire déjà versé ni imposer un remboursement sans preuve d'erreur.</p>
-      <span class="verdict">3 ans pour contester</span>
-    </div>
-    <div class="right-card">
-      <span class="tag">Congés & Heures Supp.</span>
-      <h3>CP comptent pour les heures supp.</h3>
-      <p>Depuis le 7 janvier 2026, les congés payés ne pénalisent plus le calcul du seuil des heures supplémentaires.</p>
-      <span class="verdict">Cass. 7 jan. 2026</span>
-    </div>
-    <div class="right-card">
-      <span class="tag">Prime Retirée</span>
-      <h3>Sanction pécuniaire interdite</h3>
-      <p>Retirer une prime pour punir un salarié est <strong>illégal</strong>. L'employeur peut sanctionner, mais pas enlever de l'argent.</p>
-      <span class="verdict">Cass. 21 jan. 2026</span>
-    </div>
-    <div class="right-card">
-      <span class="tag">Congé Naissance</span>
-      <h3>Nouveau droit 2026</h3>
-      <p>Un nouveau congé de naissance de 1 à 2 mois est créé pour les enfants nés à partir du 1er janvier 2026.</p>
-      <span class="verdict">Accessible juil. 2026</span>
-    </div>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Congés Payés</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Arrêt maladie → CP acquis</div>
+  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Même en arrêt, vous acquérez des congés payés. Non professionnel : 2 j/mois. Professionnel : 2,5 j/mois.</div>
+  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Réforme 22 avril</span>
+</div>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Acompte Salaire</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Employeur ne peut pas refuser</div>
+  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">L'acompte porte sur du travail déjà effectué. L'employeur est obligé d'accorder la 1ère demande du mois.</div>
+  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Droit absolu</span>
+</div>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Bulletin Salaire</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Rectification encadrée</div>
+  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">L'employeur ne peut pas diminuer un salaire déjà versé ni imposer un remboursement sans preuve d'erreur.</div>
+  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">3 ans pour contester</span>
+</div>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Congés & Heures Supp.</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">CP comptent pour les heures supp.</div>
+  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Depuis le 7 janvier 2026, les congés payés ne pénalisent plus le calcul du seuil des heures supplémentaires.</div>
+  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Cass. 7 jan. 2026</span>
+</div>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Prime Retirée</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Sanction pécuniaire interdite</div>
+  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Retirer une prime pour punir un salarié est illégal. L'employeur peut sanctionner, mais pas enlever de l'argent.</div>
+  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Cass. 21 jan. 2026</span>
+</div>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Congé Naissance</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Nouveau droit 2026</div>
+  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Un congé de naissance de 1 à 2 mois est créé pour les enfants nés à partir du 1er janvier 2026.</div>
+  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Accessible juil. 2026</span>
+</div>
   </div>
-
-  <div class="alert reveal"><h3>⚠️ Rappel important</h3><p>Tous ces droits sont basés sur des arrêts réels de la Cour de cassation. En cas de litige, contactez immédiatement un représentant FMPS-i.</p></div>
+  <div class="alert reveal"><h3>⚠️ Rappel important</h3><p>En cas de litige, <strong>contactez immédiatement un représentant FMPS-i</strong>. Ne laissez pas l'employeur agir sans réagir.</p></div>
   <div class="cbar reveal"><div><h3>Un doute sur vos droits ?</h3><p>Contactez un représentant FMPS-i</p></div><div class="cnums"><a href="tel:0785371558" class="cnum">Akim — 07 85 37 15 58</a><a href="tel:0658692876" class="cnum">Lamia — 06 58 69 28 76</a></div></div>
 </div><footer>
   <div class="foot-logo">FMPS<span class="dot">-i</span></div>
   <div class="foot-tag">Fédération des Métiers de la Prévention et de la Sécurité — Indépendant</div>
   <ul class="foot-nav">
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="droits.html">Vos Droits</a></li>
-    <li><a href="sante.html">Santé & Sécurité</a></li>
-    <li><a href="elections.html">Élections 2026</a></li>
-    <li><a href="victoires.html">Nos Victoires</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="index.html">Accueil</a></li><li><a href="droits.html">Vos Droits</a></li>
+    <li><a href="sante.html">Santé & Sécurité</a></li><li><a href="elections.html">Élections 2026</a></li>
+    <li><a href="victoires.html">Nos Victoires</a></li><li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="foot-copy">© 2026 FMPS-i · Toujours copié, jamais égalé · 2 rue de l'Église, 94300 Vincennes · 09 81 94 43 91</div>
 </footer>
 <script>
-// Scroll reveal
-const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-// Rights bar animation
-document.querySelectorAll('.rights-bar-fill').forEach(el=>{
-  const w=el.getAttribute('data-w');
-  const obs2=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){el.style.width=w;el.classList.add('in');}});},{threshold:.3});
+document.querySelectorAll('[data-counter]').forEach(el=>{
+  const obs2=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!el.dataset.done){
+    el.dataset.done=1;
+    const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',pfx=el.dataset.prefix||'';
+    let cur=0;const step=target/70;
+    const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=pfx+Math.floor(cur).toLocaleString('fr-FR')+suffix;if(cur>=target)clearInterval(t);},18);
+  }});},{threshold:.4});
   obs2.observe(el);
 });
-
-// Countdown to elections (May 4 2026)
-function updateCountdown(){
-  const target=new Date('2026-05-04T08:00:00');
-  const now=new Date();
-  const diff=target-now;
-  if(diff<=0){document.getElementById('cd-days').textContent='0';return;}
-  const days=Math.floor(diff/(1000*60*60*24));
-  const hours=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
-  const mins=Math.floor((diff%(1000*60*60))/(1000*60));
-  const secs=Math.floor((diff%(1000*60))/1000);
-  const d=document.getElementById('cd-days');
-  const h=document.getElementById('cd-hours');
-  const m=document.getElementById('cd-mins');
-  const s=document.getElementById('cd-secs');
-  if(d)d.textContent=days;
-  if(h)h.textContent=String(hours).padStart(2,'0');
-  if(m)m.textContent=String(mins).padStart(2,'0');
-  if(s)s.textContent=String(secs).padStart(2,'0');
+const cdTarget=new Date('2026-05-04T08:00:00');
+function tick(){
+  const d=cdTarget-new Date();if(d<=0)return;
+  const days=Math.floor(d/86400000),h=Math.floor((d%86400000)/3600000);
+  const m=Math.floor((d%3600000)/60000),s=Math.floor((d%60000)/1000);
+  ['cd-d','cd-h','cd-m','cd-s'].forEach((id,i)=>{
+    const el=document.getElementById(id);
+    if(el)el.textContent=[days,String(h).padStart(2,'0'),String(m).padStart(2,'0'),String(s).padStart(2,'0')][i];
+  });
 }
-updateCountdown();
-setInterval(updateCountdown,1000);
-
-// Counter animation
-function animateCounter(el,target,suffix=''){
-  let current=0;
-  const step=target/80;
-  const timer=setInterval(()=>{
-    current=Math.min(current+step,target);
-    el.textContent=Math.floor(current).toLocaleString('fr-FR')+suffix;
-    if(current>=target)clearInterval(timer);
-  },20);
-}
-const cobs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting&&!x.target.dataset.animated){
-  x.target.dataset.animated='1';
-  const t=parseInt(x.target.dataset.target);
-  const s=x.target.dataset.suffix||'';
-  animateCounter(x.target,t,s);
-}});},{threshold:.3});
-document.querySelectorAll('[data-counter]').forEach(el=>cobs.observe(el));
+tick();setInterval(tick,1000);
+document.querySelectorAll('.rights-fill').forEach(el=>{
+  const obs3=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!el.style.width){el.style.width=el.dataset.w;}});},{threshold:.4});
+  obs3.observe(el);
+});
 </script></body></html>
