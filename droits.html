@@ -2,6 +2,7 @@
 <html lang="fr"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Vos Droits — FMPS-i</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,600;1,400&display=swap');
 :root{
@@ -521,6 +522,20 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s;}
 .reveal.in{opacity:1;transform:translateY(0);}
+
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes slide-words{0%,18%{transform:translateY(0)}25%,43%{transform:translateY(-2.4rem)}50%,68%{transform:translateY(-4.8rem)}75%,93%{transform:translateY(-7.2rem)}100%{transform:translateY(-9.6rem)}}
+@keyframes flash{0%,100%{opacity:1}50%{opacity:.55}}
+@keyframes pulse-icon{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes bar-in{from{width:0}to{width:var(--w)}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:translateY(0)}
+.canvas-anim{display:block;width:100%;border-radius:10px;cursor:default}
+.rb{margin-bottom:18px}
+.rb-top{display:flex;justify-content:space-between;font-family:Barlow Condensed,sans-serif;font-size:.82rem;font-weight:700;color:#0B1E3D;margin-bottom:7px}
+.rb-ok{color:#27AE60;font-size:.74rem}
+.rb-track{background:rgba(30,91,168,.08);border-radius:20px;height:12px;overflow:hidden}
+.rb-fill{height:100%;background:linear-gradient(to right,#1A4A8A,#2E86C1);border-radius:20px;width:0;transition:width 1.8s cubic-bezier(.2,.8,.2,1)}
 </style></head>
 <body><nav><a class="nav-logo" href="index.html">FMPS<span class="dot">-i</span></a><ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="droits.html" class="active">Vos Droits</a></li><li><a href="sante.html">Santé & Sécurité</a></li><li><a href="elections.html">Élections 2026</a></li><li><a href="victoires.html">Nos Victoires</a></li><li class="nav-cta"><a href="contact.html">Contact</a></li></ul></nav><div class="ticker-wrap"><div class="ticker">
   <span class="ticker-item">Arrêt maladie : vos droits sont protégés</span>
@@ -534,128 +549,67 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
   <span class="ticker-item">Harcèlement managérial reconnu par la Cour de cassation</span>
   <span class="ticker-item">Choc émotionnel = accident du travail reconnu à 100%</span>
 </div></div>
-<section class="page-hero">
-  <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span>Vos Droits</div>
+<section class="page-hero"><div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span>Vos Droits</div>
   <span class="page-hero-tag">Informations Juridiques</span>
   <h1>Vos droits <em>clairement</em><br>expliqués</h1>
-  <p>Basé sur les arrêts réels de la Cour de cassation — connaître vos droits, c'est les défendre.</p>
+  <p>Basé sur les arrêts réels de la Cour de cassation.</p>
 </section>
 <div class="main">
   <div class="g12 reveal" style="margin-bottom:52px;align-items:center">
-    
-<div style="background:linear-gradient(160deg,#050d1c 0%,#0a1a35 50%,#0f2850 100%);border-radius:10px;overflow:hidden;min-height:380px;position:relative">
-  <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
-    <defs>
-      <radialGradient id="bg2" cx="50%" cy="80%" r="60%">
-        <stop offset="0%" stop-color="#C9A84C" stop-opacity=".12"/>
-        <stop offset="100%" stop-color="transparent"/>
-      </radialGradient>
-    </defs>
-    <rect width="700" height="380" fill="url(#bg2)"/>
-    <!-- Titre -->
-    <text x="350" y="38" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,.45)" letter-spacing="4">LA JUSTICE TRAVAILLE POUR VOUS</text>
-    <!-- Pilier central -->
-    <rect x="345" y="80" width="10" height="220" rx="3" fill="#C9A84C" opacity=".8"/>
-    <ellipse cx="350" cy="80" rx="12" ry="8" fill="#E8C765"/>
-    <!-- Base -->
-    <rect x="290" y="300" width="120" height="14" rx="5" fill="#C9A84C" opacity=".7"/>
-    <rect x="310" y="314" width="80" height="8" rx="3" fill="#C9A84C" opacity=".4"/>
-    <!-- BRAS oscillant -->
-    <g style="animation:balance-swing 3.5s ease-in-out infinite;transform-origin:350px 80px">
-      <!-- bras gauche -->
-      <line x1="350" y1="80" x2="140" y2="110" stroke="#E8C765" stroke-width="4" stroke-linecap="round"/>
-      <!-- bras droit -->
-      <line x1="350" y1="80" x2="560" y2="110" stroke="#E8C765" stroke-width="4" stroke-linecap="round"/>
-      <!-- cordons gauche -->
-      <line x1="140" y1="110" x2="110" y2="180" stroke="#C9A84C" stroke-width="2"/>
-      <line x1="140" y1="110" x2="170" y2="180" stroke="#C9A84C" stroke-width="2"/>
-      <!-- plateau gauche — VOS DROITS -->
-      <rect x="90" y="180" width="100" height="52" rx="8" fill="#1A4A8A"/>
-      <text x="140" y="202" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="13" font-weight="800" fill="white" letter-spacing="1">VOS DROITS</text>
-      <text x="140" y="222" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="10" fill="rgba(255,255,255,.65)" letter-spacing="1">PROTÉGÉS PAR LA LOI</text>
-      <!-- cordons droite -->
-      <line x1="560" y1="110" x2="530" y2="180" stroke="#C9A84C" stroke-width="2"/>
-      <line x1="560" y1="110" x2="590" y2="180" stroke="#C9A84C" stroke-width="2"/>
-      <!-- plateau droit — INJUSTICE -->
-      <rect x="510" y="180" width="100" height="52" rx="8" fill="#7B2020"/>
-      <text x="560" y="202" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="13" font-weight="800" fill="white" letter-spacing="1">INJUSTICE</text>
-      <text x="560" y="222" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="10" fill="rgba(255,255,255,.6)" letter-spacing="1">COMBATTUE</text>
-    </g>
-    <!-- Icônes dans plateaux (statiques) -->
-    <text x="140" y="168" text-anchor="middle" font-size="20" fill="#E8C765">⚖</text>
-    <text x="560" y="168" text-anchor="middle" font-size="20" fill="rgba(255,100,100,.8)">✕</text>
-    <!-- Légende bas -->
-    <text x="350" y="360" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="12" fill="rgba(255,255,255,.35)" letter-spacing="2">FMPS-i — UN SYNDICAT QUI DÉFEND VRAIMENT</text>
-  </svg>
-</div>
-    <div>
-      <span class="lbl">Arrêt Maladie</span><h2 class="h2">Vos droits lors d'un <em>arrêt maladie</em></h2><div class="sep"></div>
-      <div class="box"><h4>⚖️ Cass. — 1er oct. 2025 (n° 24-15.529)</h4><p>Les arrêts maladie <strong>ne peuvent pas être déduits</strong> de l'ancienneté pour le calcul des indemnités de licenciement.</p></div>
-      <div class="box"><h4>🔒 Secret médical absolu</h4><ul><li>L'employeur <strong>ne peut pas</strong> contacter votre médecin</li><li>Ni obtenir des informations sur votre arrêt</li><li>Ni utiliser ces infos pour vous licencier — Cass. 10 déc. 2025</li></ul></div>
+    <canvas id="cv-balance" class="canvas-anim" height="340" style="height:340px"></canvas>
+    <div><span class="lbl">Arrêt Maladie</span><h2 class="h2">Vos droits lors d'un <em>arrêt maladie</em></h2><div class="sep"></div>
+      <div class="box"><h4>⚖️ Cass. — 1er oct. 2025 (n° 24-15.529)</h4><p>Les arrêts maladie <strong>ne peuvent pas être déduits</strong> de l'ancienneté pour les indemnités de licenciement.</p></div>
+      <div class="box"><h4>🔒 Secret médical absolu</h4><ul><li>L'employeur <strong>ne peut pas</strong> contacter votre médecin</li><li>Ni obtenir des infos sur votre arrêt</li><li>Ni l'utiliser pour vous licencier — Cass. 10 déc. 2025</li></ul></div>
     </div>
   </div>
-  <div class="reveal" style="margin-bottom:48px">
-<div style="background:white;border-radius:10px;box-shadow:0 4px 24px rgba(11,30,61,.1);padding:32px 28px">
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E86C1;margin-bottom:24px">Vos droits reconnus — Cour de cassation</div>
-  <style>
-  .rb{margin-bottom:18px}
-  .rb-top{display:flex;justify-content:space-between;font-family:Barlow Condensed,sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.5px;color:#0B1E3D;margin-bottom:7px}
-  .rb-ok{color:#27AE60;font-size:.75rem}
-  .rb-track{background:rgba(30,91,168,.08);border-radius:20px;height:12px;overflow:hidden}
-  .rights-fill{height:100%;background:linear-gradient(to right,#1A4A8A,#2E86C1);border-radius:20px;width:0;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
-  </style>
-  <div class="rb"><div class="rb-top"><span>Arrêt maladie & ancienneté</span><span class="rb-ok">✓ Protégé — Cass. oct. 2025</span></div><div class="rb-track"><div class="rights-fill" data-w="96%"></div></div></div>
-  <div class="rb"><div class="rb-top"><span>Congés payés en arrêt maladie</span><span class="rb-ok">✓ Reconnu — Réforme 2024</span></div><div class="rb-track"><div class="rights-fill" data-w="92%"></div></div></div>
-  <div class="rb"><div class="rb-top"><span>Choc émotionnel = accident du travail</span><span class="rb-ok">✓ Cass. oct. 2023</span></div><div class="rb-track"><div class="rights-fill" data-w="89%"></div></div></div>
-  <div class="rb"><div class="rb-top"><span>Harcèlement managérial collectif</span><span class="rb-ok">✓ Cass. déc. 2025</span></div><div class="rb-track"><div class="rights-fill" data-w="86%"></div></div></div>
-  <div class="rb"><div class="rb-top"><span>Sanction pécuniaire interdite</span><span class="rb-ok">✓ Cass. jan. 2026</span></div><div class="rb-track"><div class="rights-fill" data-w="100%"></div></div></div>
-  <div class="rb" style="margin:0"><div class="rb-top"><span>Congés payés & heures supplémentaires</span><span class="rb-ok">✓ Cass. jan. 2026</span></div><div class="rb-track"><div class="rights-fill" data-w="91%"></div></div></div>
+  <div class="reveal" style="margin-bottom:48px"><div style="background:white;border-radius:10px;box-shadow:0 4px 24px rgba(11,30,61,.1);padding:30px 26px">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#2E86C1;margin-bottom:22px">Vos droits reconnus — Cour de cassation</div>
+  <div class="rb"><div class="rb-top"><span>Arrêt maladie & ancienneté</span><span class="rb-ok">✓ Cass. oct. 2025</span></div><div class="rb-track"><div class="rb-fill" data-w="96%"></div></div></div>
+  <div class="rb"><div class="rb-top"><span>Congés payés en arrêt maladie</span><span class="rb-ok">✓ Réforme 2024</span></div><div class="rb-track"><div class="rb-fill" data-w="92%"></div></div></div>
+  <div class="rb"><div class="rb-top"><span>Choc émotionnel = accident du travail</span><span class="rb-ok">✓ Cass. oct. 2023</span></div><div class="rb-track"><div class="rb-fill" data-w="89%"></div></div></div>
+  <div class="rb"><div class="rb-top"><span>Harcèlement managérial collectif</span><span class="rb-ok">✓ Cass. déc. 2025</span></div><div class="rb-track"><div class="rb-fill" data-w="86%"></div></div></div>
+  <div class="rb"><div class="rb-top"><span>Sanction pécuniaire interdite</span><span class="rb-ok">✓ Cass. jan. 2026</span></div><div class="rb-track"><div class="rb-fill" data-w="100%"></div></div></div>
+  <div class="rb" style="margin:0"><div class="rb-top"><span>Congés payés & heures supplémentaires</span><span class="rb-ok">✓ Cass. jan. 2026</span></div><div class="rb-track"><div class="rb-fill" data-w="91%"></div></div></div>
 </div></div>
   <div class="g3 reveal" style="margin-bottom:52px">
-    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
-  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Congés Payés</div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Arrêt maladie → CP acquis</div>
-  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Même en arrêt, vous acquérez des congés payés. Non professionnel : 2 j/mois. Professionnel : 2,5 j/mois.</div>
-  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Réforme 22 avril</span>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:22px 20px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 30px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:7px">Congés Payés</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.12rem;font-weight:800;color:#0B1E3D;margin-bottom:5px;line-height:1.2">Arrêt maladie → CP acquis</div>
+  <div style="font-size:.88rem;color:#5D6D7E;line-height:1.5;margin-bottom:11px">Même en arrêt, vous acquérez des CP. Non prof. : 2 j/mois. Prof. : 2,5 j/mois. Délai de report : 15 mois.</div>
+  <span style="background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:3px">Réforme 22 avril</span>
 </div>
-    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
-  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Acompte Salaire</div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Employeur ne peut pas refuser</div>
-  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">L'acompte porte sur du travail déjà effectué. L'employeur est obligé d'accorder la 1ère demande du mois.</div>
-  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Droit absolu</span>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:22px 20px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 30px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:7px">Acompte Salaire</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.12rem;font-weight:800;color:#0B1E3D;margin-bottom:5px;line-height:1.2">Employeur ne peut pas refuser</div>
+  <div style="font-size:.88rem;color:#5D6D7E;line-height:1.5;margin-bottom:11px">L'acompte porte sur du travail déjà effectué. Obligation d'accorder la 1ère demande mensuelle.</div>
+  <span style="background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:3px">Droit absolu</span>
 </div>
-    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
-  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Bulletin Salaire</div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Rectification encadrée</div>
-  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">L'employeur ne peut pas diminuer un salaire déjà versé ni imposer un remboursement sans preuve d'erreur.</div>
-  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">3 ans pour contester</span>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:22px 20px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 30px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:7px">Bulletin Salaire</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.12rem;font-weight:800;color:#0B1E3D;margin-bottom:5px;line-height:1.2">Rectification encadrée</div>
+  <div style="font-size:.88rem;color:#5D6D7E;line-height:1.5;margin-bottom:11px">Impossible de diminuer un salaire déjà versé ni d'imposer un remboursement sans preuve d'erreur réelle.</div>
+  <span style="background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:3px">3 ans pour contester</span>
 </div>
-    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
-  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Congés & Heures Supp.</div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">CP comptent pour les heures supp.</div>
-  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Depuis le 7 janvier 2026, les congés payés ne pénalisent plus le calcul du seuil des heures supplémentaires.</div>
-  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Cass. 7 jan. 2026</span>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:22px 20px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 30px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:7px">Congés & Heures Supp.</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.12rem;font-weight:800;color:#0B1E3D;margin-bottom:5px;line-height:1.2">CP comptent pour les heures supp.</div>
+  <div style="font-size:.88rem;color:#5D6D7E;line-height:1.5;margin-bottom:11px">Depuis le 7 jan. 2026, les congés payés ne pénalisent plus le seuil de déclenchement des heures supp.</div>
+  <span style="background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:3px">Cass. 7 jan. 2026</span>
 </div>
-    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
-  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Prime Retirée</div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Sanction pécuniaire interdite</div>
-  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Retirer une prime pour punir un salarié est illégal. L'employeur peut sanctionner, mais pas enlever de l'argent.</div>
-  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Cass. 21 jan. 2026</span>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:22px 20px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 30px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:7px">Prime Retirée</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.12rem;font-weight:800;color:#0B1E3D;margin-bottom:5px;line-height:1.2">Sanction pécuniaire interdite</div>
+  <div style="font-size:.88rem;color:#5D6D7E;line-height:1.5;margin-bottom:11px">Retirer une prime pour punir est illégal. L'employeur peut sanctionner, mais pas enlever de l'argent.</div>
+  <span style="background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:3px">Cass. 21 jan. 2026</span>
 </div>
-    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
-  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Congé Naissance</div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Nouveau droit 2026</div>
-  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Un congé de naissance de 1 à 2 mois est créé pour les enfants nés à partir du 1er janvier 2026.</div>
-  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Accessible juil. 2026</span>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:22px 20px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 30px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:7px">Congé Naissance</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.12rem;font-weight:800;color:#0B1E3D;margin-bottom:5px;line-height:1.2">Nouveau droit 2026</div>
+  <div style="font-size:.88rem;color:#5D6D7E;line-height:1.5;margin-bottom:11px">Congé de 1 à 2 mois pour les enfants nés à partir du 1er janvier 2026. Accessible dès juillet 2026.</div>
+  <span style="background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:3px">Accessible juil. 2026</span>
 </div>
   </div>
-  <div class="alert reveal"><h3>⚠️ Rappel important</h3><p>En cas de litige, <strong>contactez immédiatement un représentant FMPS-i</strong>. Ne laissez pas l'employeur agir sans réagir.</p></div>
+  <div class="alert reveal"><h3>⚠️ Important</h3><p>En cas de litige, <strong>contactez immédiatement un représentant FMPS-i</strong>.</p></div>
   <div class="cbar reveal"><div><h3>Un doute sur vos droits ?</h3><p>Contactez un représentant FMPS-i</p></div><div class="cnums"><a href="tel:0785371558" class="cnum">Akim — 07 85 37 15 58</a><a href="tel:0658692876" class="cnum">Lamia — 06 58 69 28 76</a></div></div>
 </div><footer>
   <div class="foot-logo">FMPS<span class="dot">-i</span></div>
@@ -668,20 +622,23 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
   <div class="foot-copy">© 2026 FMPS-i · Toujours copié, jamais égalé · 2 rue de l'Église, 94300 Vincennes · 09 81 94 43 91</div>
 </footer>
 <script>
-const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-document.querySelectorAll('[data-counter]').forEach(el=>{
-  const obs2=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!el.dataset.done){
-    el.dataset.done=1;
-    const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',pfx=el.dataset.prefix||'';
-    let cur=0;const step=target/70;
-    const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=pfx+Math.floor(cur).toLocaleString('fr-FR')+suffix;if(cur>=target)clearInterval(t);},18);
-  }});},{threshold:.4});
-  obs2.observe(el);
+const _obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>_obs.observe(el));
+document.querySelectorAll('.rb-fill').forEach(el=>{
+  const o=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting&&!el.style.width){el.style.width=el.dataset.w;}});},{threshold:.4});
+  o.observe(el);
 });
-const cdTarget=new Date('2026-05-04T08:00:00');
+document.querySelectorAll('[data-counter]').forEach(el=>{
+  const o=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting&&!el.dataset.done){
+    el.dataset.done=1;const t=parseInt(el.dataset.target),sf=el.dataset.suffix||'',pf=el.dataset.prefix||'';
+    let c=0;const st=t/70;
+    const ti=setInterval(()=>{c=Math.min(c+st,t);el.textContent=pf+Math.floor(c).toLocaleString('fr-FR')+sf;if(c>=t)clearInterval(ti);},18);
+  }});},{threshold:.4});
+  o.observe(el);
+});
+const cdT=new Date('2026-05-04T08:00:00');
 function tick(){
-  const d=cdTarget-new Date();if(d<=0)return;
+  const d=cdT-new Date();if(d<=0)return;
   const days=Math.floor(d/86400000),h=Math.floor((d%86400000)/3600000);
   const m=Math.floor((d%3600000)/60000),s=Math.floor((d%60000)/1000);
   ['cd-d','cd-h','cd-m','cd-s'].forEach((id,i)=>{
@@ -690,8 +647,53 @@ function tick(){
   });
 }
 tick();setInterval(tick,1000);
-document.querySelectorAll('.rights-fill').forEach(el=>{
-  const obs3=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!el.style.width){el.style.width=el.dataset.w;}});},{threshold:.4});
-  obs3.observe(el);
-});
+</script>
+<script>
+(function(){
+  const cv=document.getElementById('cv-balance');
+  if(!cv)return;
+  function sz(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;}
+  sz();window.addEventListener('resize',sz);
+  const ctx=cv.getContext('2d');
+  const G='#C9A84C',GB='#E8C765',BL='#1A4A8A';
+  let t=0,tiltDir=1;
+  cv.style.cursor='pointer';
+  cv.addEventListener('click',()=>tiltDir*=-1);
+  function frame(){
+    t+=.014;const W=cv.width,H=cv.height;
+    ctx.clearRect(0,0,W,H);
+    const bg=ctx.createLinearGradient(0,0,W,H);
+    bg.addColorStop(0,'#040c1c');bg.addColorStop(1,'#0a1835');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+    const tilt=Math.sin(t*1.2)*.22*tiltDir;
+    const cx=W/2,pivY=H*.28,aL=Math.min(W*.36,195);
+    const pilG=ctx.createLinearGradient(cx-4,0,cx+4,0);
+    pilG.addColorStop(0,G);pilG.addColorStop(.5,GB);pilG.addColorStop(1,G);
+    ctx.fillStyle=pilG;ctx.beginPath();ctx.roundRect(cx-4,pivY,8,H*.52,3);ctx.fill();
+    ctx.fillStyle=G;ctx.beginPath();ctx.roundRect(cx-52,pivY+H*.52-6,104,13,4);ctx.fill();
+    ctx.fillStyle=GB;ctx.beginPath();ctx.arc(cx,pivY,10,0,Math.PI*2);ctx.fill();
+    ctx.save();ctx.translate(cx,pivY);ctx.rotate(tilt);
+    const aG=ctx.createLinearGradient(-aL,0,aL,0);
+    aG.addColorStop(0,'#B8941A');aG.addColorStop(.5,GB);aG.addColorStop(1,'#B8941A');
+    ctx.fillStyle=aG;ctx.beginPath();ctx.roundRect(-aL,-5,aL*2,10,5);ctx.fill();
+    [[- aL,'#1A4A8A','VOS DROITS','PROTÉGÉS PAR LA LOI','#E8C765','#B0D0F0'],[aL,'#6B1A1A','INJUSTICE','COMBATTUE','#FFAAAA','#FF8888']].forEach(([ax,pc,l1,l2,c1,c2])=>{
+      const pL=78,pW=108,pH=54;
+      ctx.strokeStyle='rgba(201,168,76,.55)';ctx.lineWidth=1.5;
+      ctx.beginPath();ctx.moveTo(ax-28,0);ctx.lineTo(ax-20,pL);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(ax+28,0);ctx.lineTo(ax+20,pL);ctx.stroke();
+      ctx.fillStyle=pc;ctx.shadowColor='rgba(0,0,0,.4)';ctx.shadowBlur=12;ctx.shadowOffsetY=4;
+      ctx.beginPath();ctx.roundRect(ax-pW/2,pL,pW,pH,8);ctx.fill();
+      ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+      ctx.strokeStyle='rgba(255,255,255,.12)';ctx.lineWidth=1;
+      ctx.beginPath();ctx.moveTo(ax-pW/2+8,pL+1);ctx.lineTo(ax+pW/2-8,pL+1);ctx.stroke();
+      ctx.fillStyle=c1;ctx.font='900 13px Barlow Condensed,sans-serif';ctx.textAlign='center';ctx.fillText(l1,ax,pL+25);
+      ctx.fillStyle=c2;ctx.font='400 10px Barlow Condensed,sans-serif';ctx.fillText(l2,ax,pL+42);
+    });
+    ctx.restore();
+    ctx.fillStyle='rgba(201,168,76,.45)';ctx.font='700 11px Barlow Condensed,sans-serif';ctx.textAlign='center';ctx.letterSpacing='4px';ctx.fillText('LA JUSTICE PENCHE POUR VOS DROITS',W/2,H-20);
+    ctx.fillStyle='rgba(255,255,255,.18)';ctx.font='400 9px Barlow Condensed,sans-serif';ctx.letterSpacing='1px';ctx.fillText('cliquer pour basculer',W/2,H-6);
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
 </script></body></html>

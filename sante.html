@@ -2,6 +2,7 @@
 <html lang="fr"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Santé & Sécurité — FMPS-i</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,600;1,400&display=swap');
 :root{
@@ -521,6 +522,20 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s;}
 .reveal.in{opacity:1;transform:translateY(0);}
+
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes slide-words{0%,18%{transform:translateY(0)}25%,43%{transform:translateY(-2.4rem)}50%,68%{transform:translateY(-4.8rem)}75%,93%{transform:translateY(-7.2rem)}100%{transform:translateY(-9.6rem)}}
+@keyframes flash{0%,100%{opacity:1}50%{opacity:.55}}
+@keyframes pulse-icon{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes bar-in{from{width:0}to{width:var(--w)}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:translateY(0)}
+.canvas-anim{display:block;width:100%;border-radius:10px;cursor:default}
+.rb{margin-bottom:18px}
+.rb-top{display:flex;justify-content:space-between;font-family:Barlow Condensed,sans-serif;font-size:.82rem;font-weight:700;color:#0B1E3D;margin-bottom:7px}
+.rb-ok{color:#27AE60;font-size:.74rem}
+.rb-track{background:rgba(30,91,168,.08);border-radius:20px;height:12px;overflow:hidden}
+.rb-fill{height:100%;background:linear-gradient(to right,#1A4A8A,#2E86C1);border-radius:20px;width:0;transition:width 1.8s cubic-bezier(.2,.8,.2,1)}
 </style></head>
 <body><nav><a class="nav-logo" href="index.html">FMPS<span class="dot">-i</span></a><ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="droits.html">Vos Droits</a></li><li><a href="sante.html" class="active">Santé & Sécurité</a></li><li><a href="elections.html">Élections 2026</a></li><li><a href="victoires.html">Nos Victoires</a></li><li class="nav-cta"><a href="contact.html">Contact</a></li></ul></nav><div class="ticker-wrap"><div class="ticker">
   <span class="ticker-item">Arrêt maladie : vos droits sont protégés</span>
@@ -534,106 +549,57 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
   <span class="ticker-item">Harcèlement managérial reconnu par la Cour de cassation</span>
   <span class="ticker-item">Choc émotionnel = accident du travail reconnu à 100%</span>
 </div></div>
-<section class="page-hero">
-  <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span>Santé & Sécurité</div>
+<section class="page-hero"><div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span>Santé & Sécurité</div>
   <span class="page-hero-tag">Santé Mentale & Physique au Travail</span>
   <h1>Votre santé<br>est un <em>droit</em></h1>
-  <p>Choc émotionnel, harcèlement, malaise, accident psychique — la loi vous protège.</p>
+  <p>Choc émotionnel, harcèlement, malaise — la loi vous protège.</p>
 </section>
 <div class="main">
   <div class="g12 reveal" style="margin-bottom:52px;align-items:center">
-    
-<div style="background:linear-gradient(160deg,#040c1a 0%,#0a1a35 60%,#1a4a8a 100%);border-radius:10px;overflow:hidden;min-height:360px;display:flex;align-items:center;justify-content:center;position:relative">
-  <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
-    <!-- ondes radar -->
-    <circle cx="300" cy="170" r="60" fill="none" stroke="rgba(201,168,76,.5)" stroke-width="1.5" style="animation:ring-out 3s 0s ease-out infinite"/>
-    <circle cx="300" cy="170" r="60" fill="none" stroke="rgba(201,168,76,.4)" stroke-width="1.2" style="animation:ring-out 3s 1s ease-out infinite"/>
-    <circle cx="300" cy="170" r="60" fill="none" stroke="rgba(201,168,76,.3)" stroke-width="1" style="animation:ring-out 3s 2s ease-out infinite"/>
-    <!-- Bouclier forme -->
-    <path d="M300 50 L390 82 L390 172 Q390 240 300 270 Q210 240 210 172 L210 82 Z" fill="#0F2850" stroke="#C9A84C" stroke-width="3">
-      <animate attributeName="stroke-opacity" values="1;.5;1" dur="2.5s" repeatCount="indefinite"/>
-    </path>
-    <!-- Bouclier intérieur -->
-    <path d="M300 68 L376 96 L376 170 Q376 228 300 255 Q224 228 224 170 L224 96 Z" fill="#1A4A8A" stroke="#E8C765" stroke-width="1" opacity=".5"/>
-    <!-- Croix FMPS-i stylisée -->
-    <text x="300" y="148" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="28" font-weight="900" fill="#C9A84C" letter-spacing="2">FMPS-i</text>
-    <text x="300" y="176" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="11" fill="rgba(255,255,255,.6)" letter-spacing="3">PROTECTION SYNDICALE</text>
-    <!-- Coche -->
-    <path d="M276 198 L292 214 L328 178" stroke="#E8C765" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <animate attributeName="stroke-dasharray" from="0,80" to="80,0" dur="1.2s" fill="freeze"/>
-    </path>
-    <!-- Éléments de protection autour -->
-    <g fill="none" stroke="rgba(201,168,76,.3)" stroke-width="1">
-      <rect x="68" y="120" width="80" height="32" rx="5"/>
-      <text x="108" y="141" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="10" fill="rgba(255,255,255,.5)" letter-spacing="1">JURIDIQUE</text>
-      <line x1="148" y1="136" x2="208" y2="155" stroke="rgba(201,168,76,.4)" stroke-dasharray="4,3"/>
-    </g>
-    <g fill="none" stroke="rgba(201,168,76,.3)" stroke-width="1">
-      <rect x="452" y="120" width="80" height="32" rx="5"/>
-      <text x="492" y="141" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="10" fill="rgba(255,255,255,.5)" letter-spacing="1">TERRAIN</text>
-      <line x1="452" y1="136" x2="392" y2="155" stroke="rgba(201,168,76,.4)" stroke-dasharray="4,3"/>
-    </g>
-    <g fill="none" stroke="rgba(201,168,76,.3)" stroke-width="1">
-      <rect x="68" y="200" width="80" height="32" rx="5"/>
-      <text x="108" y="221" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="10" fill="rgba(255,255,255,.5)" letter-spacing="1">DÉFENSE</text>
-      <line x1="148" y1="216" x2="210" y2="195" stroke="rgba(201,168,76,.4)" stroke-dasharray="4,3"/>
-    </g>
-    <g fill="none" stroke="rgba(201,168,76,.3)" stroke-width="1">
-      <rect x="452" y="200" width="80" height="32" rx="5"/>
-      <text x="492" y="221" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="10" fill="rgba(255,255,255,.5)" letter-spacing="1">20 ANS</text>
-      <line x1="452" y1="216" x2="390" y2="198" stroke="rgba(201,168,76,.4)" stroke-dasharray="4,3"/>
-    </g>
-    <text x="300" y="318" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,.4)" letter-spacing="3">VOS DROITS SONT PROTÉGÉS</text>
-  </svg>
-</div>
-    <div>
-      <span class="lbl">Accident du Travail</span><h2 class="h2">Choc émotionnel = <em>AT reconnu</em></h2><div class="sep"></div>
+    <canvas id="cv-shield" class="canvas-anim" height="320" style="height:320px"></canvas>
+    <div><span class="lbl">Accident du Travail</span><h2 class="h2">Choc émotionnel = <em>AT reconnu</em></h2><div class="sep"></div>
       <div class="box"><h4>⚖️ Cass. — 19 oct. 2023 (conf. 2024)</h4><ul><li>Même un entretien RH « normal » peut constituer un AT</li><li>L'absence d'agressivité n'exclut pas la reconnaissance</li><li>Pour refuser : l'employeur ou la CPAM doit prouver une cause étrangère</li></ul></div>
-      <div class="box"><h4>✅ Conditions de reconnaissance</h4><ul><li><strong>Soudaineté</strong> — événement précis identifiable</li><li><strong>Temps & lieu du travail</strong> — présomption d'imputabilité</li></ul><p style="margin-top:8px"><strong>Exemples :</strong> annonce brutale, altercation, réunion conflictuelle, témoin d'un accident grave.</p></div>
+      <div class="box"><h4>✅ Conditions</h4><ul><li><strong>Soudaineté</strong> — événement précis</li><li><strong>Temps & lieu du travail</strong> — présomption d'imputabilité</li></ul><p style="margin-top:8px"><strong>Exemples :</strong> annonce brutale, altercation, réunion conflictuelle.</p></div>
     </div>
   </div>
   <div class="g3 reveal" style="margin-bottom:52px">
-    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
-  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Accident Psychique</div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Crise de nerfs = AT déclarable</div>
-  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Une crise de nerfs consécutive à un événement de travail est un accident psychique. Déclaration CPAM obligatoire sous 48h.</div>
-  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Art. L.411-1</span>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:22px 20px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 30px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:7px">Accident Psychique</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.12rem;font-weight:800;color:#0B1E3D;margin-bottom:5px;line-height:1.2">Crise de nerfs = AT déclarable</div>
+  <div style="font-size:.88rem;color:#5D6D7E;line-height:1.5;margin-bottom:11px">Une crise de nerfs consécutive à un événement de travail est un AT. Déclaration CPAM sous 48h.</div>
+  <span style="background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:3px">Art. L.411-1</span>
 </div>
-    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
-  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Malaise</div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Malaise au travail = AT présumé</div>
-  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Un malaise survenant sur le lieu et pendant le temps de travail est présumé être un AT, même si la cause est personnelle.</div>
-  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Présomption légale</span>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:22px 20px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 30px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:7px">Malaise</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.12rem;font-weight:800;color:#0B1E3D;margin-bottom:5px;line-height:1.2">Malaise au travail = AT présumé</div>
+  <div style="font-size:.88rem;color:#5D6D7E;line-height:1.5;margin-bottom:11px">Un malaise sur le lieu et pendant le temps de travail est présumé être un AT, même si la cause est personnelle.</div>
+  <span style="background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:3px">Présomption légale</span>
 </div>
-    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:24px 22px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 32px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
-  <div style="position:absolute;top:0;left:-100%;width:100%;height:3px;background:linear-gradient(to right,transparent,#C9A84C,transparent);transition:left .5s" onmouseover="this.style.left='100%'" onmouseout="this.style.left='-100%'"></div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:8px">Harcèlement</div>
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.15rem;font-weight:800;color:#0B1E3D;margin-bottom:6px;line-height:1.2">Harcèlement managérial collectif</div>
-  <div style="font-size:.9rem;color:#5D6D7E;line-height:1.5;margin-bottom:12px">Les méthodes dégradant les conditions de travail sans viser directement un salarié constituent du harcèlement moral.</div>
-  <span style="display:inline-block;background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:3px">Cass. 10 déc. 2025</span>
+    <div style="background:white;border-radius:8px;box-shadow:0 4px 20px rgba(11,30,61,.1);padding:22px 20px;border-left:4px solid #1A4A8A;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s" onmouseover="this.style.transform='translateX(6px)';this.style.borderColor='#C9A84C';this.style.boxShadow='0 8px 30px rgba(11,30,61,.18)'" onmouseout="this.style.transform='';this.style.borderColor='#1A4A8A';this.style.boxShadow='0 4px 20px rgba(11,30,61,.1)'">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#2E86C1;margin-bottom:7px">Harcèlement</div>
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:1.12rem;font-weight:800;color:#0B1E3D;margin-bottom:5px;line-height:1.2">Harcèlement managérial collectif</div>
+  <div style="font-size:.88rem;color:#5D6D7E;line-height:1.5;margin-bottom:11px">Les méthodes dégradant les conditions sans viser directement un salarié constituent du harcèlement moral.</div>
+  <span style="background:#0B1E3D;color:#C9A84C;font-family:Barlow Condensed,sans-serif;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:3px">Cass. 10 déc. 2025</span>
 </div>
   </div>
-  <div class="reveal" style="margin-bottom:36px">
-<div style="background:linear-gradient(160deg,#040e08,#0a1e10,#0d2a14);border-radius:10px;padding:36px 28px">
-  <div style="font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#C9A84C;margin-bottom:20px">Que faire immédiatement après un incident</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-    <div style="display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:8px;padding:18px 16px">
-      <span style="background:#C9A84C;color:#0B1E3D;font-family:Barlow Condensed,sans-serif;font-size:1.3rem;font-weight:900;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;animation:pulse-icon 2s 0s ease-in-out infinite">1</span>
-      <div><div style="font-family:Barlow Condensed,sans-serif;font-size:1rem;font-weight:800;color:white;margin-bottom:4px">Consulter un médecin</div><div style="font-size:.84rem;color:rgba(255,255,255,.55);line-height:1.5">Obtenir un certificat médical initial le jour même</div></div>
+  <div class="reveal" style="margin-bottom:36px"><div style="background:linear-gradient(160deg,#040e08,#0a1e10,#0d2a14);border-radius:10px;padding:32px 26px">
+  <div style="font-family:Barlow Condensed,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#C9A84C;margin-bottom:18px">Que faire immédiatement après un incident</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+    <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:8px;padding:16px 14px">
+      <span style="background:#C9A84C;color:#0B1E3D;font-family:Barlow Condensed,sans-serif;font-size:1.2rem;font-weight:900;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;animation:pulse-icon 2s 0s ease-in-out infinite">1</span>
+      <div><div style="font-family:Barlow Condensed,sans-serif;font-size:1rem;font-weight:800;color:white;margin-bottom:3px">Consulter un médecin</div><div style="font-size:.83rem;color:rgba(255,255,255,.52);line-height:1.5">Certificat médical initial le jour même</div></div>
     </div>
-    <div style="display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:8px;padding:18px 16px">
-      <span style="background:#C9A84C;color:#0B1E3D;font-family:Barlow Condensed,sans-serif;font-size:1.3rem;font-weight:900;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;animation:pulse-icon 2s .4s ease-in-out infinite">2</span>
-      <div><div style="font-family:Barlow Condensed,sans-serif;font-size:1rem;font-weight:800;color:white;margin-bottom:4px">Informer l'employeur</div><div style="font-size:.84rem;color:rgba(255,255,255,.55);line-height:1.5">Sous 24h — il est obligé de déclarer à la CPAM</div></div>
+    <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:8px;padding:16px 14px">
+      <span style="background:#C9A84C;color:#0B1E3D;font-family:Barlow Condensed,sans-serif;font-size:1.2rem;font-weight:900;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;animation:pulse-icon 2s .4s ease-in-out infinite">2</span>
+      <div><div style="font-family:Barlow Condensed,sans-serif;font-size:1rem;font-weight:800;color:white;margin-bottom:3px">Informer l'employeur</div><div style="font-size:.83rem;color:rgba(255,255,255,.52);line-height:1.5">Sous 24h — déclaration CPAM obligatoire</div></div>
     </div>
-    <div style="display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:8px;padding:18px 16px">
-      <span style="background:#C9A84C;color:#0B1E3D;font-family:Barlow Condensed,sans-serif;font-size:1.3rem;font-weight:900;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;animation:pulse-icon 2s .8s ease-in-out infinite">3</span>
-      <div><div style="font-family:Barlow Condensed,sans-serif;font-size:1rem;font-weight:800;color:white;margin-bottom:4px">Déclarer à la CPAM</div><div style="font-size:.84rem;color:rgba(255,255,255,.55);line-height:1.5">Accident du travail — délai de 48h maximum</div></div>
+    <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:8px;padding:16px 14px">
+      <span style="background:#C9A84C;color:#0B1E3D;font-family:Barlow Condensed,sans-serif;font-size:1.2rem;font-weight:900;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;animation:pulse-icon 2s .8s ease-in-out infinite">3</span>
+      <div><div style="font-family:Barlow Condensed,sans-serif;font-size:1rem;font-weight:800;color:white;margin-bottom:3px">Déclarer à la CPAM</div><div style="font-size:.83rem;color:rgba(255,255,255,.52);line-height:1.5">Accident du travail — délai 48h max.</div></div>
     </div>
-    <div style="display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:8px;padding:18px 16px">
-      <span style="background:#C9A84C;color:#0B1E3D;font-family:Barlow Condensed,sans-serif;font-size:1.3rem;font-weight:900;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;animation:pulse-icon 2s 1.2s ease-in-out infinite">4</span>
-      <div><div style="font-family:Barlow Condensed,sans-serif;font-size:1rem;font-weight:800;color:white;margin-bottom:4px">Contacter FMPS-i</div><div style="font-size:.84rem;color:rgba(255,255,255,.55);line-height:1.5">Nous vous accompagnons dans toutes les démarches</div></div>
+    <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:8px;padding:16px 14px">
+      <span style="background:#C9A84C;color:#0B1E3D;font-family:Barlow Condensed,sans-serif;font-size:1.2rem;font-weight:900;min-width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;animation:pulse-icon 2s 1.2s ease-in-out infinite">4</span>
+      <div><div style="font-family:Barlow Condensed,sans-serif;font-size:1rem;font-weight:800;color:white;margin-bottom:3px">Contacter FMPS-i</div><div style="font-size:.83rem;color:rgba(255,255,255,.52);line-height:1.5">Accompagnement dans toutes les démarches</div></div>
     </div>
   </div>
 </div></div>
@@ -649,20 +615,23 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
   <div class="foot-copy">© 2026 FMPS-i · Toujours copié, jamais égalé · 2 rue de l'Église, 94300 Vincennes · 09 81 94 43 91</div>
 </footer>
 <script>
-const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-document.querySelectorAll('[data-counter]').forEach(el=>{
-  const obs2=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!el.dataset.done){
-    el.dataset.done=1;
-    const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',pfx=el.dataset.prefix||'';
-    let cur=0;const step=target/70;
-    const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=pfx+Math.floor(cur).toLocaleString('fr-FR')+suffix;if(cur>=target)clearInterval(t);},18);
-  }});},{threshold:.4});
-  obs2.observe(el);
+const _obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>_obs.observe(el));
+document.querySelectorAll('.rb-fill').forEach(el=>{
+  const o=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting&&!el.style.width){el.style.width=el.dataset.w;}});},{threshold:.4});
+  o.observe(el);
 });
-const cdTarget=new Date('2026-05-04T08:00:00');
+document.querySelectorAll('[data-counter]').forEach(el=>{
+  const o=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting&&!el.dataset.done){
+    el.dataset.done=1;const t=parseInt(el.dataset.target),sf=el.dataset.suffix||'',pf=el.dataset.prefix||'';
+    let c=0;const st=t/70;
+    const ti=setInterval(()=>{c=Math.min(c+st,t);el.textContent=pf+Math.floor(c).toLocaleString('fr-FR')+sf;if(c>=t)clearInterval(ti);},18);
+  }});},{threshold:.4});
+  o.observe(el);
+});
+const cdT=new Date('2026-05-04T08:00:00');
 function tick(){
-  const d=cdTarget-new Date();if(d<=0)return;
+  const d=cdT-new Date();if(d<=0)return;
   const days=Math.floor(d/86400000),h=Math.floor((d%86400000)/3600000);
   const m=Math.floor((d%3600000)/60000),s=Math.floor((d%60000)/1000);
   ['cd-d','cd-h','cd-m','cd-s'].forEach((id,i)=>{
@@ -671,8 +640,69 @@ function tick(){
   });
 }
 tick();setInterval(tick,1000);
-document.querySelectorAll('.rights-fill').forEach(el=>{
-  const obs3=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!el.style.width){el.style.width=el.dataset.w;}});},{threshold:.4});
-  obs3.observe(el);
-});
+</script>
+<script>
+(function(){
+  const cv=document.getElementById('cv-shield');
+  if(!cv)return;
+  function sz(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;}
+  sz();window.addEventListener('resize',sz);
+  const ctx=cv.getContext('2d');
+  const G='#C9A84C',BL='#1A4A8A';
+  let t=0;const pts=[];
+  setInterval(()=>{const a=Math.random()*Math.PI*2,r=18+Math.random()*10;pts.push({x:0,y:0,ox:Math.cos(a)*r,oy:Math.sin(a)*r,vx:(Math.cos(a)+Math.random()-.5)*2,vy:(Math.sin(a)+Math.random()-.5)*2-.5,l:1,s:2+Math.random()*3});},110);
+  function shieldPath(cx,cy,sc){
+    ctx.beginPath();
+    ctx.moveTo(cx,cy-92*sc);
+    ctx.bezierCurveTo(cx+74*sc,cy-72*sc,cx+83*sc,cy-18*sc,cx+78*sc,cy+32*sc);
+    ctx.bezierCurveTo(cx+58*sc,cy+82*sc,cx,cy+112*sc,cx,cy+112*sc);
+    ctx.bezierCurveTo(cx,cy+112*sc,cx-58*sc,cy+82*sc,cx-78*sc,cy+32*sc);
+    ctx.bezierCurveTo(cx-83*sc,cy-18*sc,cx-74*sc,cy-72*sc,cx,cy-92*sc);
+  }
+  function frame(){
+    t+=.016;const W=cv.width,H=cv.height,cx=W/2,cy=H/2;
+    ctx.clearRect(0,0,W,H);
+    const bg=ctx.createRadialGradient(cx,cy,10,cx,cy,W*.62);
+    bg.addColorStop(0,'#0a1835');bg.addColorStop(1,'#040c1a');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+    for(let r=40;r<=155;r+=38){
+      ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);
+      ctx.strokeStyle=`rgba(201,168,76,${r===155?.1:.04})`;ctx.lineWidth=r===155?1.5:.5;ctx.stroke();
+    }
+    const sw=t*1.5;
+    ctx.save();ctx.translate(cx,cy);ctx.rotate(sw);
+    const sg=ctx.createLinearGradient(0,0,150,0);
+    sg.addColorStop(0,'rgba(201,168,76,.32)');sg.addColorStop(1,'rgba(201,168,76,0)');
+    ctx.fillStyle=sg;ctx.beginPath();ctx.moveTo(0,0);ctx.arc(0,0,155,-.38,0);ctx.fill();
+    ctx.restore();
+    [[68,-30,.7],[- 92,18,1.1],[28,82,.5],[-48,-72,.95]].forEach(([dx,dy,ph])=>{
+      const p=(Math.sin(t*3+ph)+1)/2;if(p>.65){
+        ctx.fillStyle=`rgba(201,168,76,${(p-.65)*3})`;ctx.beginPath();ctx.arc(cx+dx,cy+dy,3.5,0,Math.PI*2);ctx.fill();
+      }
+    });
+    ctx.shadowColor='rgba(201,168,76,.28)';ctx.shadowBlur=18;
+    shieldPath(cx,cy,1);ctx.fillStyle='#0f2850';ctx.fill();ctx.shadowBlur=0;
+    const gi=.58+Math.sin(t*2)*.2;
+    shieldPath(cx,cy,1);ctx.strokeStyle=`rgba(201,168,76,${gi})`;ctx.lineWidth=2.5;ctx.stroke();
+    shieldPath(cx,cy,.82);ctx.strokeStyle='rgba(232,199,101,.18)';ctx.lineWidth=1;ctx.stroke();
+    ctx.fillStyle=G;ctx.font='900 22px Barlow Condensed,sans-serif';ctx.textAlign='center';ctx.fillText('FMPS-i',cx,cy-6);
+    ctx.fillStyle='rgba(255,255,255,.5)';ctx.font='400 9px Barlow Condensed,sans-serif';ctx.letterSpacing='2px';ctx.fillText('PROTECTION SYNDICALE',cx,cy+13);
+    const cp=Math.min(1,(Math.sin(t)+1)*.62);
+    ctx.beginPath();ctx.moveTo(cx-22,cy+32);ctx.lineTo(cx-4,cy+50);ctx.lineTo(cx+28,cy+18);
+    ctx.strokeStyle=G;ctx.lineWidth=4;ctx.lineCap='round';ctx.lineJoin='round';
+    ctx.setLineDash([100*cp,100]);ctx.stroke();ctx.setLineDash([]);
+    [{a:-Math.PI*.14,l:'JURIDIQUE'},{a:Math.PI*.14,l:'TERRAIN'},{a:-Math.PI*.86,l:'DÉFENSE'},{a:Math.PI*.86,l:'20 ANS'}].forEach(s=>{
+      const r2=147,sx=cx+Math.cos(s.a)*r2,sy=cy+Math.sin(s.a)*r2;
+      const p=.45+Math.sin(t*2+s.a)*.25;
+      ctx.fillStyle=`rgba(201,168,76,${p})`;ctx.font='700 9px Barlow Condensed,sans-serif';ctx.textAlign='center';ctx.letterSpacing='1px';ctx.fillText(s.l,sx,sy+4);
+    });
+    pts.forEach((p,i)=>{
+      p.x=p.ox+cx;p.y=p.oy+cy;p.ox+=p.vx;p.oy+=p.vy;p.l-=.02;
+      if(p.l<=0){pts.splice(i,1);return;}
+      ctx.fillStyle=`rgba(201,168,76,${p.l*.65})`;ctx.beginPath();ctx.arc(p.x,p.y,p.s*p.l,0,Math.PI*2);ctx.fill();
+    });
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
 </script></body></html>

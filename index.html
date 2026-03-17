@@ -2,6 +2,7 @@
 <html lang="fr"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Accueil — FMPS-i</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,600;1,400&display=swap');
 :root{
@@ -521,6 +522,20 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s;}
 .reveal.in{opacity:1;transform:translateY(0);}
+
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes slide-words{0%,18%{transform:translateY(0)}25%,43%{transform:translateY(-2.4rem)}50%,68%{transform:translateY(-4.8rem)}75%,93%{transform:translateY(-7.2rem)}100%{transform:translateY(-9.6rem)}}
+@keyframes flash{0%,100%{opacity:1}50%{opacity:.55}}
+@keyframes pulse-icon{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes bar-in{from{width:0}to{width:var(--w)}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:translateY(0)}
+.canvas-anim{display:block;width:100%;border-radius:10px;cursor:default}
+.rb{margin-bottom:18px}
+.rb-top{display:flex;justify-content:space-between;font-family:Barlow Condensed,sans-serif;font-size:.82rem;font-weight:700;color:#0B1E3D;margin-bottom:7px}
+.rb-ok{color:#27AE60;font-size:.74rem}
+.rb-track{background:rgba(30,91,168,.08);border-radius:20px;height:12px;overflow:hidden}
+.rb-fill{height:100%;background:linear-gradient(to right,#1A4A8A,#2E86C1);border-radius:20px;width:0;transition:width 1.8s cubic-bezier(.2,.8,.2,1)}
 </style></head>
 <body><nav><a class="nav-logo" href="index.html">FMPS<span class="dot">-i</span></a><ul class="nav-links"><li><a href="index.html" class="active">Accueil</a></li><li><a href="droits.html">Vos Droits</a></li><li><a href="sante.html">Santé & Sécurité</a></li><li><a href="elections.html">Élections 2026</a></li><li><a href="victoires.html">Nos Victoires</a></li><li class="nav-cta"><a href="contact.html">Contact</a></li></ul></nav><div class="ticker-wrap"><div class="ticker">
   <span class="ticker-item">Arrêt maladie : vos droits sont protégés</span>
@@ -535,18 +550,12 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
   <span class="ticker-item">Choc émotionnel = accident du travail reconnu à 100%</span>
 </div></div>
 <section class="page-hero" style="position:relative;overflow:hidden">
-  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(30,91,168,.15) 0%,transparent 60%);pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(30,91,168,.14) 0%,transparent 62%);pointer-events:none"></div>
   <span class="page-hero-tag">Syndicat Indépendant — Hubsafe</span>
   <h1>Le syndicat qui<br>défend <em>vraiment</em></h1>
-  <p style="margin-bottom:20px">Fédération des Métiers de la Prévention et de la Sécurité — 20 ans d'action sur le terrain aéroportuaire.</p>
+  <p style="margin-bottom:18px">Fédération des Métiers de la Prévention et de la Sécurité — 20 ans d'action sur le terrain aéroportuaire.</p>
   <div style="font-family:Barlow Condensed,sans-serif;font-size:1.1rem;font-weight:700;color:var(--gold);letter-spacing:3px;text-transform:uppercase;height:2.4rem;overflow:hidden">
-    <div style="animation:slide-words 10s linear infinite">
-      <div>INFORMATION JURIDIQUE FIABLE</div>
-      <div>DÉFENSE INDIVIDUELLE</div>
-      <div>PRÉSENCE TERRAIN AÉROPORTUAIRE</div>
-      <div>100% INDÉPENDANT</div>
-      <div>INFORMATION JURIDIQUE FIABLE</div>
-    </div>
+    <div style="animation:slide-words 10s linear infinite"><div>INFORMATION JURIDIQUE FIABLE</div><div>DÉFENSE INDIVIDUELLE</div><div>PRÉSENCE TERRAIN AÉROPORTUAIRE</div><div>100% INDÉPENDANT</div><div>INFORMATION JURIDIQUE FIABLE</div></div>
   </div>
 </section>
 <div class="main">
@@ -556,174 +565,41 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
     <div class="stat"><span class="stat-n">100%</span><span class="stat-l">indépendant</span></div>
   </div>
   <div class="g12 reveal" style="margin-bottom:52px;align-items:center">
-    
-<div style="background:linear-gradient(160deg,#06122a 0%,#0f2850 45%,#1a3a6e 100%);border-radius:10px;overflow:hidden;position:relative;min-height:420px;display:flex;align-items:center;justify-content:center">
-  <!-- particules -->
-  <div style="position:absolute;inset:0;pointer-events:none">
-    <div style="position:absolute;width:5px;height:5px;background:#C9A84C;border-radius:50%;bottom:20%;left:15%;animation:float-particle 3.8s 0s infinite;--dx:18px"></div>
-    <div style="position:absolute;width:3px;height:3px;background:#C9A84C;border-radius:50%;bottom:10%;left:35%;animation:float-particle 4.5s .7s infinite;--dx:-12px"></div>
-    <div style="position:absolute;width:4px;height:4px;background:#E8C765;border-radius:50%;bottom:25%;left:60%;animation:float-particle 3.2s .3s infinite;--dx:22px"></div>
-    <div style="position:absolute;width:3px;height:3px;background:#C9A84C;border-radius:50%;bottom:15%;left:80%;animation:float-particle 5s 1.2s infinite;--dx:-18px"></div>
-    <div style="position:absolute;width:5px;height:5px;background:#E8C765;border-radius:50%;bottom:5%;left:50%;animation:float-particle 4.1s .5s infinite;--dx:8px"></div>
-  </div>
-  <!-- ondes de choc -->
-  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">
-    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;border-radius:50%;border:2px solid rgba(201,168,76,.6);animation:ring-out 2.4s .0s ease-out infinite"></div>
-    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;border-radius:50%;border:2px solid rgba(201,168,76,.5);animation:ring-out 2.4s .8s ease-out infinite"></div>
-    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;border-radius:50%;border:2px solid rgba(201,168,76,.3);animation:ring-out 2.4s 1.6s ease-out infinite"></div>
-  </div>
-  <!-- SVG poing -->
-  <svg viewBox="0 0 320 360" xmlns="http://www.w3.org/2000/svg" style="width:280px;height:auto;position:relative;z-index:2">
-    <defs>
-      <radialGradient id="fg" cx="45%" cy="60%" r="55%">
-        <stop offset="0%" stop-color="#F5D078"/>
-        <stop offset="100%" stop-color="#C9901A"/>
-      </radialGradient>
-      <filter id="fs"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#C9A84C" flood-opacity=".45"/></filter>
-    </defs>
-    <g style="animation:fist-pump 1.6s ease-in-out infinite" filter="url(#fs)">
-      <!-- corps du poing -->
-      <rect x="92" y="148" width="136" height="100" rx="22" fill="url(#fg)"/>
-      <!-- index -->
-      <rect x="100" y="72" width="28" height="84" rx="14" fill="url(#fg)"/>
-      <!-- majeur -->
-      <rect x="134" y="62" width="28" height="94" rx="14" fill="url(#fg)"/>
-      <!-- annulaire -->
-      <rect x="168" y="66" width="26" height="90" rx="13" fill="url(#fg)"/>
-      <!-- auriculaire -->
-      <rect x="198" y="78" width="22" height="78" rx="11" fill="url(#fg)"/>
-      <!-- pouce -->
-      <ellipse cx="78" cy="186" rx="18" ry="28" fill="url(#fg)" transform="rotate(-20,78,186)"/>
-      <!-- articulations -->
-      <circle cx="114" cy="152" r="5" fill="rgba(180,120,10,.4)"/>
-      <circle cx="148" cy="148" r="5" fill="rgba(180,120,10,.4)"/>
-      <circle cx="181" cy="150" r="5" fill="rgba(180,120,10,.4)"/>
-      <circle cx="211" cy="154" r="5" fill="rgba(180,120,10,.4)"/>
-      <!-- manchette bleue -->
-      <rect x="92" y="240" width="136" height="36" rx="8" fill="#1A4A8A"/>
-      <text x="160" y="264" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="11" font-weight="800" fill="#E8C765" letter-spacing="2">FMPS-i</text>
-    </g>
-    <!-- trait impulsion vers le haut -->
-    <line x1="160" y1="50" x2="160" y2="10" stroke="#C9A84C" stroke-width="3" stroke-linecap="round" opacity=".0">
-      <animate attributeName="opacity" values="0;1;0" dur="1.6s" repeatCount="indefinite"/>
-      <animate attributeName="y1" values="60;40;60" dur="1.6s" repeatCount="indefinite"/>
-      <animate attributeName="y2" values="20;0;20" dur="1.6s" repeatCount="indefinite"/>
-    </line>
-    <text x="160" y="330" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="16" font-weight="800" fill="#C9A84C" letter-spacing="4">ENSEMBLE, NOUS SOMMES PLUS FORTS</text>
-  </svg>
-</div>
+    <canvas id="cv-fist" class="canvas-anim" height="400" style="height:400px"></canvas>
     <div style="display:flex;flex-direction:column;gap:18px">
-      <div>
-        <span class="lbl">Qui sommes-nous</span>
-        <h2 class="h2">Un syndicat <em>de terrain</em></h2>
-        <div class="sep"></div>
-        <p style="color:var(--slate);line-height:1.8;margin-bottom:14px">La FMPS-i est présente sur le terrain aéroportuaire depuis 20 ans. Nous défendons chaque salarié individuellement — un vrai camarade à vos côtés, pas une voix inconnue au téléphone.</p>
-        <p style="color:var(--slate);line-height:1.8">Notre force : une information juridique basée sur la jurisprudence réelle de la Cour de cassation, mise à la portée de tous.</p>
-      </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="droits.html" class="btn btn-dark">Vos droits →</a>
-        <a href="contact.html" class="btn btn-gold">Nous rejoindre →</a>
-      </div>
+      <div><span class="lbl">Qui sommes-nous</span><h2 class="h2">Un syndicat <em>de terrain</em></h2><div class="sep"></div>
+      <p style="color:var(--slate);line-height:1.8;margin-bottom:14px">La FMPS-i est présente sur le terrain aéroportuaire depuis 20 ans. Un vrai camarade à vos côtés, pas une voix inconnue au téléphone.</p>
+      <p style="color:var(--slate);line-height:1.8">Information juridique basée sur la jurisprudence réelle de la Cour de cassation, mise à la portée de tous.</p></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a href="droits.html" class="btn btn-dark">Vos droits →</a><a href="contact.html" class="btn btn-gold">Nous rejoindre →</a></div>
     </div>
   </div>
-  <div class="reveal" style="margin-bottom:36px">
-<div style="background:linear-gradient(160deg,#120202 0%,#220404 50%,#2d0808 100%);border:2px solid rgba(231,76,60,.6);border-radius:10px;padding:36px 28px;position:relative;overflow:hidden">
-  <div style="position:absolute;inset:0;background:rgba(231,76,60,.04);animation:flash-bar 2s ease-in-out infinite;pointer-events:none"></div>
-  <div style="display:flex;align-items:flex-start;gap:20px">
-    <div style="font-size:2.8rem;flex-shrink:0;animation:pulse-icon 1.2s ease-in-out infinite">🚨</div>
-    <div style="flex:1">
-      <div style="font-family:Barlow Condensed,sans-serif;font-size:1.6rem;font-weight:900;color:#E74C3C;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Stop aux attaques contre les salariés</div>
-      <div style="font-size:.92rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:16px">La direction multiplie les coups contre les salariés Hubsafe. <strong style="color:#E8C765">Rien ne changera sans mobilisation.</strong></div>
+  <div class="reveal" style="margin-bottom:36px"><div style="background:linear-gradient(160deg,#120202,#220404,#2d0808);border:1.5px solid rgba(231,76,60,.5);border-radius:10px;padding:32px 26px;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;animation:flash 2.2s ease-in-out infinite;background:rgba(231,76,60,.04);pointer-events:none"></div>
+  <div style="display:flex;align-items:flex-start;gap:18px">
+    <div style="font-size:2.4rem;flex-shrink:0;animation:pulse-icon 1.3s ease-in-out infinite">🚨</div>
+    <div>
+      <div style="font-family:Barlow Condensed,sans-serif;font-size:1.5rem;font-weight:900;color:#E74C3C;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Stop aux attaques contre les salariés</div>
+      <div style="font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.7;margin-bottom:14px">La direction multiplie les coups contre les salariés. <strong style="color:#E8C765">Rien ne changera sans mobilisation.</strong></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-        <div style="display:flex;align-items:center;gap:8px;font-size:.85rem;color:rgba(255,255,255,.65)"><span style="color:#E74C3C;font-weight:700">✕</span> Prime de participation supprimée</div>
-        <div style="display:flex;align-items:center;gap:8px;font-size:.85rem;color:rgba(255,255,255,.65)"><span style="color:#E74C3C;font-weight:700">✕</span> Prime d'intéressement supprimée</div>
-        <div style="display:flex;align-items:center;gap:8px;font-size:.85rem;color:rgba(255,255,255,.65)"><span style="color:#E74C3C;font-weight:700">✕</span> Retrait des trenchs</div>
-        <div style="display:flex;align-items:center;gap:8px;font-size:.85rem;color:rgba(255,255,255,.65)"><span style="color:#E74C3C;font-weight:700">✕</span> Parking PR supprimé</div>
+        <div style="font-size:.84rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:8px"><span style="color:#E74C3C;font-weight:900">✕</span>Prime de participation supprimée</div>
+        <div style="font-size:.84rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:8px"><span style="color:#E74C3C;font-weight:900">✕</span>Prime d'intéressement supprimée</div>
+        <div style="font-size:.84rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:8px"><span style="color:#E74C3C;font-weight:900">✕</span>Retrait des trenchs</div>
+        <div style="font-size:.84rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:8px"><span style="color:#E74C3C;font-weight:900">✕</span>Parking PR supprimé</div>
       </div>
     </div>
   </div>
 </div></div>
   <div style="margin-bottom:52px">
-    <span class="lbl">Nos domaines d'action</span>
-    <h2 class="h2">4 piliers pour <em>vous défendre</em></h2>
-    <div class="sep"></div>
+    <span class="lbl">Nos domaines d'action</span><h2 class="h2">4 piliers pour <em>vous défendre</em></h2><div class="sep"></div>
     <div class="g2" style="margin-top:8px">
-      <a href="droits.html" class="card reveal" style="text-decoration:none;color:inherit"><div class="card-body" style="border-top:3px solid var(--blue)"><span style="font-size:1.7rem;display:block;margin-bottom:10px">⚖️</span><div class="card-tag">Juridique</div><div class="card-title">Vos Droits Expliqués</div><div class="card-desc">Arrêt maladie, salaire, ancienneté, congés — tout basé sur la jurisprudence réelle.</div></div></a>
-      <a href="sante.html" class="card reveal" style="text-decoration:none;color:inherit"><div class="card-body" style="border-top:3px solid var(--sky)"><span style="font-size:1.7rem;display:block;margin-bottom:10px">🧠</span><div class="card-tag">Santé & Sécurité</div><div class="card-title">Santé au Travail</div><div class="card-desc">Choc émotionnel, harcèlement, accident psychique — vos droits reconnus.</div></div></a>
-      <a href="elections.html" class="card reveal" style="text-decoration:none;color:inherit"><div class="card-body" style="border-top:3px solid var(--gold)"><span style="font-size:1.7rem;display:block;margin-bottom:10px">🗳️</span><div class="card-tag">Élections CSE 2026</div><div class="card-title">Votez FMPS-i</div><div class="card-desc">Début mai 2026. Votre voix compte plus que jamais. Mobilisez-vous.</div></div></a>
-      <a href="victoires.html" class="card reveal" style="text-decoration:none;color:inherit"><div class="card-body" style="border-top:3px solid var(--success)"><span style="font-size:1.7rem;display:block;margin-bottom:10px">🏆</span><div class="card-tag">Résultats</div><div class="card-title">Nos Victoires</div><div class="card-desc">Hubsafe condamné. +49 174€ aux Prud'hommes de Bobigny.</div></div></a>
+      <a href="droits.html" class="card reveal" style="text-decoration:none;color:inherit"><div class="card-body" style="border-top:3px solid var(--blue)"><span style="font-size:1.6rem;display:block;margin-bottom:10px">⚖️</span><div class="card-tag">Juridique</div><div class="card-title">Vos Droits Expliqués</div><div class="card-desc">Arrêt maladie, salaire, ancienneté, congés — jurisprudence réelle.</div></div></a>
+      <a href="sante.html" class="card reveal" style="text-decoration:none;color:inherit"><div class="card-body" style="border-top:3px solid var(--sky)"><span style="font-size:1.6rem;display:block;margin-bottom:10px">🧠</span><div class="card-tag">Santé & Sécurité</div><div class="card-title">Santé au Travail</div><div class="card-desc">Choc émotionnel, harcèlement, accident psychique — vos droits reconnus.</div></div></a>
+      <a href="elections.html" class="card reveal" style="text-decoration:none;color:inherit"><div class="card-body" style="border-top:3px solid var(--gold)"><span style="font-size:1.6rem;display:block;margin-bottom:10px">🗳️</span><div class="card-tag">Élections CSE 2026</div><div class="card-title">Votez FMPS-i</div><div class="card-desc">Début mai 2026. Votre voix compte plus que jamais.</div></div></a>
+      <a href="victoires.html" class="card reveal" style="text-decoration:none;color:inherit"><div class="card-body" style="border-top:3px solid var(--success)"><span style="font-size:1.6rem;display:block;margin-bottom:10px">🏆</span><div class="card-tag">Résultats</div><div class="card-title">Nos Victoires</div><div class="card-desc">Hubsafe condamné. +49 174€ aux Prud'hommes de Bobigny.</div></div></a>
     </div>
   </div>
-  <div class="reveal" style="margin-bottom:36px">
-<div style="background:linear-gradient(180deg,#050e1e 0%,#0b1e3d 60%,#0f2850 100%);border-radius:10px;overflow:hidden;position:relative;min-height:280px">
-  <svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block">
-    <defs>
-      <radialGradient id="cg" cx="50%" cy="100%" r="55%">
-        <stop offset="0%" stop-color="#C9A84C" stop-opacity=".18"/>
-        <stop offset="100%" stop-color="transparent"/>
-      </radialGradient>
-    </defs>
-    <rect width="900" height="280" fill="url(#cg)"/>
-    <!-- BANDEROLE -->
-    <rect x="280" y="20" width="340" height="40" rx="5" fill="#C9A84C"/>
-    <text x="450" y="47" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="18" font-weight="900" fill="#0B1E3D" letter-spacing="3">VOTEZ FMPS-i — MAI 2026</text>
-    <!-- SILHOUETTES + BRAS -->
-    <!-- Personne 1 -->
-    <ellipse cx="60" cy="240" rx="22" ry="30" fill="#0f2850"/>
-    <rect x="48" y="210" width="24" height="35" rx="6" fill="#0f2850"/>
-    <rect x="54" y="148" width="8" height="66" rx="4" fill="#C9A84C" style="animation:crowd-arm 1.9s .0s ease-in-out infinite;--lift:-18px;transform-origin:62px 214px"/>
-    <!-- Personne 2 -->
-    <ellipse cx="130" cy="240" rx="22" ry="30" fill="#0f2850"/>
-    <rect x="118" y="210" width="24" height="35" rx="6" fill="#0f2850"/>
-    <rect x="124" y="138" width="8" height="76" rx="4" fill="#E8C765" style="animation:crowd-arm 2.2s .4s ease-in-out infinite;--lift:-22px;transform-origin:128px 214px"/>
-    <!-- Personne 3 -->
-    <ellipse cx="200" cy="240" rx="22" ry="30" fill="#0f2850"/>
-    <rect x="188" y="210" width="24" height="35" rx="6" fill="#0f2850"/>
-    <rect x="194" y="130" width="8" height="84" rx="4" fill="#C9A84C" style="animation:crowd-arm 1.7s .2s ease-in-out infinite;--lift:-26px;transform-origin:198px 214px"/>
-    <!-- Personne 4 large (centre gauche) -->
-    <ellipse cx="290" cy="245" rx="26" ry="34" fill="#152840"/>
-    <rect x="276" y="210" width="28" height="40" rx="7" fill="#152840"/>
-    <rect x="282" y="128" width="9" height="86" rx="4.5" fill="#C9A84C" style="animation:crowd-arm 2.0s .6s ease-in-out infinite;--lift:-28px;transform-origin:286px 214px"/>
-    <!-- Personne 5 -->
-    <ellipse cx="380" cy="240" rx="22" ry="30" fill="#0f2850"/>
-    <rect x="368" y="210" width="24" height="35" rx="6" fill="#0f2850"/>
-    <rect x="374" y="118" width="8" height="96" rx="4" fill="#E8C765" style="animation:crowd-arm 2.4s .0s ease-in-out infinite;--lift:-32px;transform-origin:378px 214px"/>
-    <!-- PANNEAU -->
-    <rect x="390" y="75" width="100" height="36" rx="4" fill="#1A4A8A"/>
-    <text x="440" y="99" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="11" font-weight="800" fill="white" letter-spacing="1">NOS DROITS !</text>
-    <line x1="440" y1="111" x2="440" y2="140" stroke="white" stroke-width="2"/>
-    <!-- Personne 6 centre -->
-    <ellipse cx="450" cy="240" rx="24" ry="32" fill="#152840"/>
-    <rect x="436" y="210" width="28" height="35" rx="7" fill="#152840"/>
-    <!-- Personne 7 -->
-    <ellipse cx="530" cy="240" rx="22" ry="30" fill="#0f2850"/>
-    <rect x="518" y="210" width="24" height="35" rx="6" fill="#0f2850"/>
-    <rect x="524" y="136" width="8" height="78" rx="4" fill="#C9A84C" style="animation:crowd-arm 1.8s .5s ease-in-out infinite;--lift:-20px;transform-origin:528px 214px"/>
-    <!-- Personne 8 -->
-    <ellipse cx="610" cy="240" rx="22" ry="30" fill="#0f2850"/>
-    <rect x="598" y="210" width="24" height="35" rx="6" fill="#0f2850"/>
-    <rect x="604" y="126" width="8" height="88" rx="4" fill="#E8C765" style="animation:crowd-arm 2.1s .9s ease-in-out infinite;--lift:-30px;transform-origin:608px 214px"/>
-    <!-- PANNEAU 2 -->
-    <rect x="615" y="68" width="90" height="36" rx="4" fill="#922B21"/>
-    <text x="660" y="92" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-size="10" font-weight="800" fill="white" letter-spacing="1">STOP AUX ATTAQUES</text>
-    <line x1="660" y1="104" x2="660" y2="136" stroke="white" stroke-width="2"/>
-    <!-- Personne 9 -->
-    <ellipse cx="690" cy="240" rx="22" ry="30" fill="#0f2850"/>
-    <rect x="678" y="210" width="24" height="35" rx="6" fill="#0f2850"/>
-    <rect x="684" y="130" width="8" height="84" rx="4" fill="#C9A84C" style="animation:crowd-arm 2.3s .3s ease-in-out infinite;--lift:-24px;transform-origin:688px 214px"/>
-    <!-- Personne 10 -->
-    <ellipse cx="770" cy="240" rx="22" ry="30" fill="#0f2850"/>
-    <rect x="758" y="210" width="24" height="35" rx="6" fill="#0f2850"/>
-    <rect x="764" y="142" width="8" height="72" rx="4" fill="#E8C765" style="animation:crowd-arm 1.6s .7s ease-in-out infinite;--lift:-16px;transform-origin:768px 214px"/>
-    <!-- Personne 11 -->
-    <ellipse cx="840" cy="240" rx="22" ry="30" fill="#0f2850"/>
-    <rect x="828" y="210" width="24" height="35" rx="6" fill="#0f2850"/>
-    <rect x="834" y="134" width="8" height="80" rx="4" fill="#C9A84C" style="animation:crowd-arm 2.0s 1.1s ease-in-out infinite;--lift:-22px;transform-origin:838px 214px"/>
-    <!-- REFLET SOL -->
-    <rect x="0" y="268" width="900" height="12" fill="rgba(201,168,76,.04)" rx="0"/>
-  </svg>
-</div></div>
-  <div class="cbar reveal"><div><h3>Besoin d'aide ? Contactez-nous</h3><p>Lun–Ven · 8h00–16h30 · 2 rue de l'Église, 94300 Vincennes</p></div><div class="cnums"><a href="tel:0785371558" class="cnum">Akim — 07 85 37 15 58</a><a href="tel:0658692876" class="cnum">Lamia — 06 58 69 28 76</a></div></div>
+  <div class="reveal" style="margin-bottom:36px"><canvas id="cv-crowd" class="canvas-anim" height="280" style="height:280px"></canvas></div>
+  <div class="cbar reveal"><div><h3>Besoin d'aide ?</h3><p>Lun–Ven · 8h00–16h30 · 2 rue de l'Église, 94300 Vincennes</p></div><div class="cnums"><a href="tel:0785371558" class="cnum">Akim — 07 85 37 15 58</a><a href="tel:0658692876" class="cnum">Lamia — 06 58 69 28 76</a></div></div>
 </div><footer>
   <div class="foot-logo">FMPS<span class="dot">-i</span></div>
   <div class="foot-tag">Fédération des Métiers de la Prévention et de la Sécurité — Indépendant</div>
@@ -735,20 +611,23 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
   <div class="foot-copy">© 2026 FMPS-i · Toujours copié, jamais égalé · 2 rue de l'Église, 94300 Vincennes · 09 81 94 43 91</div>
 </footer>
 <script>
-const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-document.querySelectorAll('[data-counter]').forEach(el=>{
-  const obs2=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!el.dataset.done){
-    el.dataset.done=1;
-    const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',pfx=el.dataset.prefix||'';
-    let cur=0;const step=target/70;
-    const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=pfx+Math.floor(cur).toLocaleString('fr-FR')+suffix;if(cur>=target)clearInterval(t);},18);
-  }});},{threshold:.4});
-  obs2.observe(el);
+const _obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>_obs.observe(el));
+document.querySelectorAll('.rb-fill').forEach(el=>{
+  const o=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting&&!el.style.width){el.style.width=el.dataset.w;}});},{threshold:.4});
+  o.observe(el);
 });
-const cdTarget=new Date('2026-05-04T08:00:00');
+document.querySelectorAll('[data-counter]').forEach(el=>{
+  const o=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting&&!el.dataset.done){
+    el.dataset.done=1;const t=parseInt(el.dataset.target),sf=el.dataset.suffix||'',pf=el.dataset.prefix||'';
+    let c=0;const st=t/70;
+    const ti=setInterval(()=>{c=Math.min(c+st,t);el.textContent=pf+Math.floor(c).toLocaleString('fr-FR')+sf;if(c>=t)clearInterval(ti);},18);
+  }});},{threshold:.4});
+  o.observe(el);
+});
+const cdT=new Date('2026-05-04T08:00:00');
 function tick(){
-  const d=cdTarget-new Date();if(d<=0)return;
+  const d=cdT-new Date();if(d<=0)return;
   const days=Math.floor(d/86400000),h=Math.floor((d%86400000)/3600000);
   const m=Math.floor((d%3600000)/60000),s=Math.floor((d%60000)/1000);
   ['cd-d','cd-h','cd-m','cd-s'].forEach((id,i)=>{
@@ -757,8 +636,116 @@ function tick(){
   });
 }
 tick();setInterval(tick,1000);
-document.querySelectorAll('.rights-fill').forEach(el=>{
-  const obs3=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting&&!el.style.width){el.style.width=el.dataset.w;}});},{threshold:.4});
-  obs3.observe(el);
-});
+</script>
+<script>
+(function(){
+  const cv=document.getElementById('cv-fist');
+  if(!cv)return;
+  function sz(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;}
+  sz();window.addEventListener('resize',sz);
+  const rings=[];let t=0;
+  setInterval(()=>rings.push({r:24,a:.9,s:3.8}),750);
+  rings.push({r:24,a:.9,s:3.8});
+  const ctx=cv.getContext('2d');
+  const G='#C9A84C',GB='#E8C765',NV='#0B1E3D',BL='#1A4A8A';
+  function drawFist(cx,cy,sc,t){
+    ctx.save();ctx.translate(cx,cy+Math.sin(t*2)*10);ctx.scale(sc,sc);
+    const g=ctx.createLinearGradient(-50,-100,50,80);
+    g.addColorStop(0,'#F5D07A');g.addColorStop(1,'#C9901A');
+    ctx.fillStyle=g;ctx.strokeStyle='rgba(201,168,76,.25)';ctx.lineWidth=1;
+    ctx.beginPath();ctx.roundRect(-46,-20,92,100,20);ctx.fill();ctx.stroke();
+    [[-36,-92,22,76],[-12,-102,22,86],[12,-98,20,82],[34,-86,18,70]].forEach(([x,y,w,h])=>{
+      ctx.beginPath();ctx.roundRect(x,y,w,h,11);ctx.fill();ctx.stroke();
+    });
+    ctx.save();ctx.translate(-60,-10);ctx.rotate(-.4);
+    ctx.beginPath();ctx.roundRect(0,-14,20,42,10);ctx.fill();ctx.stroke();ctx.restore();
+    ctx.fillStyle='rgba(160,100,10,.45)';
+    [-32,-8,16,38].forEach(x=>{ctx.beginPath();ctx.arc(x,-22,5,0,Math.PI*2);ctx.fill();});
+    ctx.fillStyle=BL;ctx.beginPath();ctx.roundRect(-46,75,92,30,[0,0,8,8]);ctx.fill();
+    ctx.fillStyle=G;ctx.font='bold 11px Barlow Condensed,sans-serif';ctx.textAlign='center';ctx.fillText('FMPS-i',0,97);
+    ctx.restore();
+  }
+  function frame(){
+    t+=.016;const W=cv.width,H=cv.height;
+    ctx.clearRect(0,0,W,H);
+    const bg=ctx.createRadialGradient(W/2,H*.6,20,W/2,H*.6,W*.72);
+    bg.addColorStop(0,'#0f2850');bg.addColorStop(1,'#050e1e');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+    ctx.strokeStyle='rgba(201,168,76,.035)';ctx.lineWidth=1;
+    for(let i=0;i<W;i+=44){ctx.beginPath();ctx.moveTo(i,0);ctx.lineTo(i,H);ctx.stroke();}
+    const cx=W/2,cy=H*.52;
+    rings.forEach((r,i)=>{
+      r.r+=r.s;r.a-=.012;if(r.a<=0){rings.splice(i,1);return;}
+      ctx.beginPath();ctx.arc(cx,cy,r.r,0,Math.PI*2);
+      ctx.strokeStyle=`rgba(201,168,76,${r.a})`;ctx.lineWidth=1.8;ctx.stroke();
+    });
+    const boom=(Math.sin(t*2)+1)/2;
+    if(boom>.88){
+      for(let i=0;i<8;i++){
+        const a=(i/8)*Math.PI*2,l=20+boom*26;
+        ctx.beginPath();ctx.moveTo(cx+Math.cos(a)*24,cy+Math.sin(a)*24);ctx.lineTo(cx+Math.cos(a)*l,cy+Math.sin(a)*l);
+        ctx.strokeStyle=`rgba(232,199,101,${(boom-.88)*7})`;ctx.lineWidth=2;ctx.stroke();
+      }
+    }
+    drawFist(cx,cy,1.5,t);
+    ctx.fillStyle=`rgba(201,168,76,${.38+Math.sin(t)*.1})`;
+    ctx.font='900 16px Barlow Condensed,sans-serif';ctx.textAlign='center';ctx.letterSpacing='4px';
+    ctx.fillText('ENSEMBLE, NOUS SOMMES PLUS FORTS',W/2,H-22);
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
+</script>
+<script>
+(function(){
+  const cv=document.getElementById('cv-crowd');
+  if(!cv)return;
+  function sz(){cv.width=cv.offsetWidth;cv.height=cv.offsetHeight;}
+  sz();window.addEventListener('resize',sz);
+  const ctx=cv.getContext('2d');
+  const G='#C9A84C',GB='#E8C765',BL='#1A4A8A',RED='#922B21',NV='#0B1E3D';
+  let t=0;
+  let people=[];
+  function buildPeople(){
+    const W=cv.width,H=cv.height;
+    people=Array.from({length:20},(_, i)=>({
+      x:(i/19)*(W-80)+40,ph:Math.random()*Math.PI*2,
+      sp:.7+Math.random()*.9,h:50+Math.random()*22,
+      c:Math.random()>.5?'#0f2850':'#152840',
+      ac:Math.random()>.55?G:GB,
+      sg:i%5===2?'NOS DROITS':i%7===0?'VOTEZ FMPS-i':null,
+      sc:i%5===2?BL:RED
+    }));
+  }
+  buildPeople();window.addEventListener('resize',buildPeople);
+  function frame(){
+    t+=.018;const W=cv.width,H=cv.height;
+    ctx.clearRect(0,0,W,H);
+    const bg=ctx.createLinearGradient(0,0,0,H);
+    bg.addColorStop(0,'#040c18');bg.addColorStop(1,'#0b1e3d');
+    ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+    const bw=Math.min(320,W*.55),bx=W/2-bw/2;
+    ctx.fillStyle=G;ctx.beginPath();ctx.roundRect(bx,10,bw,32,4);ctx.fill();
+    ctx.fillStyle=NV;ctx.font='900 12px Barlow Condensed,sans-serif';ctx.textAlign='center';
+    ctx.fillText('VOTEZ FMPS-i — MAI 2026',W/2,32);
+    people.forEach(p=>{
+      const base=H-8,lift=Math.sin(t*p.sp+p.ph)*24+24;
+      const at=base-p.h-55-lift;
+      if(p.sg){
+        ctx.fillStyle=p.sc;ctx.beginPath();ctx.roundRect(p.x-32,at-26,64,20,3);ctx.fill();
+        ctx.fillStyle='#fff';ctx.font='700 8px Barlow Condensed,sans-serif';ctx.textAlign='center';ctx.fillText(p.sg,p.x,at-10);
+        ctx.strokeStyle='rgba(255,255,255,.25)';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(p.x,at-6);ctx.lineTo(p.x,at+28);ctx.stroke();
+      }
+      ctx.strokeStyle=p.ac;ctx.lineWidth=6;ctx.lineCap='round';
+      ctx.beginPath();ctx.moveTo(p.x,base-p.h-8);ctx.lineTo(p.x,at+28);ctx.stroke();
+      ctx.fillStyle=p.ac;ctx.beginPath();ctx.roundRect(p.x-5,at+18,10,12,3);ctx.fill();
+      ctx.fillStyle=p.c;ctx.beginPath();ctx.roundRect(p.x-12,base-p.h,24,p.h,[0,0,5,5]);ctx.fill();
+      const hg=ctx.createRadialGradient(p.x,base-p.h-16,2,p.x,base-p.h-16,12);
+      hg.addColorStop(0,'#e8c080');hg.addColorStop(1,'#c09040');
+      ctx.fillStyle=hg;ctx.beginPath();ctx.arc(p.x,base-p.h-16,11,0,Math.PI*2);ctx.fill();
+    });
+    requestAnimationFrame(frame);
+  }
+  frame();
+})();
 </script></body></html>
