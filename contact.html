@@ -1044,8 +1044,7 @@ function printBulletin() {
   @page { size: A4; margin: 16mm 14mm; }
   @media print {
     body { padding: 0; }
-    .no-print { display: none !important; }
-  }
+    }
 
   /* Header */
   .preview-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px; padding-bottom:16px; border-bottom:2px solid #1A4A8A; }
@@ -1081,7 +1080,7 @@ function printBulletin() {
 </head>
 <body>
 ${html}
-<button class="print-btn no-print" onclick="window.print();window.close()">🖨️ Imprimer le bulletin</button>
+
 <script>
   // Auto-focus pour imprimer directement si souhaité
   window.focus();
@@ -1089,6 +1088,7 @@ ${html}
 </body>
 </html>`);
   win.document.close();
+  win.onload = function() { win.print(); win.close(); };
 }
 
 // Scroll reveal
