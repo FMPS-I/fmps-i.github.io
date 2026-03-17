@@ -729,16 +729,7 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
   .bul-tabs { flex-wrap: wrap; }
   .bul-tab { flex: none; width: 50%; }
 }
-@media print {
-  nav, .ticker-wrap, .page-hero, .rep-grid, .cbar,
-  .bul-hero, .bul-tabs, #panel-form, #panel-image, footer,
-  .breadcrumb { display: none !important; }
-  body { background: white !important; }
-  .main { padding: 0 !important; max-width: 100% !important; }
-  .bulletin-epic { background: white !important; box-shadow: none !important; }
-  #panel-preview { display: block !important; padding: 0 !important; }
-  .bul-preview { box-shadow: none !important; border: 1px solid #ddd; }
-}
+@media print { body { display: none !important; } }
 </style>
 </head>
 <body>
@@ -795,7 +786,7 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
       <span class="lbl">Siège Social</span><h2 class="h2">Infos <em>pratiques</em></h2><div class="sep"></div>
       <div class="box" style="display:flex;gap:14px;align-items:center"><span style="font-size:1.5rem">📍</span><div><div style="font-family:var(--font-h);font-size:1.15rem;font-weight:700">2 rue de l'Église, 94300 Vincennes</div><div style="font-size:.82rem;color:var(--slate);margin-top:2px">Siège F.M.P.S. HUBSAFE</div></div></div>
       <div class="box" style="display:flex;gap:14px;align-items:center"><span style="font-size:1.5rem">📞</span><div><div style="font-family:var(--font-h);font-size:1.15rem;font-weight:700">09 81 94 43 91</div><div style="font-size:.82rem;color:var(--slate);margin-top:2px">Standard — Lun–Ven 8h00–16h30</div></div></div>
-      <div class="box" style="display:flex;gap:14px;align-items:center"><span style="font-size:1.5rem">📧</span><div><div style="font-family:var(--font-h);font-size:1.05rem;font-weight:700">fmpshubsafe@gmail.com</div><div style="font-size:.82rem;color:var(--slate);margin-top:2px">Email — PayPal accepté</div></div></div>
+      <div class="box" style="display:flex;gap:14px;align-items:center"><span style="font-size:1.5rem">📧</span><div><div style="font-family:var(--font-h);font-size:1.05rem;font-weight:700"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="84e2e9f4f7ecf1e6f7e5e2e1c4e3e9e5ede8aae7ebe9">[email&#160;protected]</a></div><div style="font-size:.82rem;color:var(--slate);margin-top:2px">Email — PayPal accepté</div></div></div>
       <div class="alert"><h3>🤝 Pourquoi nous rejoindre ?</h3><p>Information juridique fiable · Défense individuelle · Présence terrain · 20 ans d'expérience · 100% indépendant</p></div>
     </div>
   </div>
@@ -972,7 +963,7 @@ footer{background:var(--navy);border-top:3px solid var(--blue);padding:44px 6% 2
 
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Tab switching
 function switchTab(tab) {
   document.querySelectorAll('.bul-tab').forEach((t,i) => {
@@ -1033,12 +1024,71 @@ function updatePreview() {
   }
 }
 
-// Print
+// Print — ouvre une fenêtre dédiée avec uniquement le bulletin
 function printBulletin() {
   updatePreview();
-  // Switch to preview
-  switchTab('preview');
-  setTimeout(() => window.print(), 200);
+
+  const preview = document.getElementById('bulletin-preview');
+  const html = preview ? preview.outerHTML : '';
+
+  const win = window.open('', '_blank', 'width=900,height=1200');
+  win.document.write(`<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Bulletin d'adhésion FMPS-i 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#fff; font-family:'Barlow',sans-serif; font-size:13px; color:#0B1E3D; padding:24px 28px; max-width:780px; margin:0 auto; }
+  @page { size: A4; margin: 16mm 14mm; }
+  @media print {
+    body { padding: 0; }
+    .no-print { display: none !important; }
+  }
+
+  /* Header */
+  .preview-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px; padding-bottom:16px; border-bottom:2px solid #1A4A8A; }
+  .preview-logo { font-family:'Barlow Condensed',sans-serif; font-size:2rem; font-weight:900; color:#1A4A8A; letter-spacing:2px; line-height:1; }
+  .preview-logo small { display:block; font-size:.55rem; letter-spacing:3px; color:#5D6D7E; margin-top:2px; font-family:'Barlow',sans-serif; font-weight:400; }
+  .preview-title { text-align:center; flex:1; padding:0 20px; }
+  .preview-title h3 { font-family:'Barlow Condensed',sans-serif; font-size:1.05rem; font-weight:800; color:#0B1E3D; letter-spacing:1px; }
+  .year-badge { display:inline-block; background:#1A4A8A; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:.72rem; padding:2px 12px; border-radius:2px; letter-spacing:2px; margin-top:4px; }
+  .preview-siege { text-align:right; font-size:.75rem; color:#5D6D7E; line-height:1.6; }
+  .preview-siege strong { color:#0B1E3D; }
+
+  /* Sections */
+  .preview-section { background:#EBF5FF; border-radius:6px; padding:12px 16px; margin-bottom:12px; }
+  .preview-section h4 { font-family:'Barlow Condensed',sans-serif; font-size:.85rem; font-weight:800; color:#1A4A8A; letter-spacing:1px; margin-bottom:8px; text-transform:uppercase; }
+
+  /* Rows */
+  .preview-row { display:flex; gap:6px; align-items:baseline; margin-bottom:8px; border-bottom:1px dashed rgba(30,91,168,.15); padding-bottom:8px; }
+  .preview-row:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+  .field-name { font-family:'Barlow Condensed',sans-serif; font-size:.8rem; font-weight:700; color:#1A4A8A; min-width:100px; letter-spacing:.5px; }
+  .field-val { font-size:.88rem; color:#0B1E3D; font-weight:600; flex:1; border-bottom:1px solid #1A4A8A; padding-bottom:2px; min-height:18px; }
+
+  /* Check boxes */
+  .check-box { display:inline-flex; align-items:center; justify-content:center; width:14px; height:14px; border:1.5px solid #1A4A8A; border-radius:2px; font-size:.65rem; margin-right:5px; vertical-align:middle; }
+  .check-box.checked { background:#1A4A8A; color:white; }
+
+  /* Footer */
+  .preview-footer { margin-top:16px; padding-top:14px; border-top:2px solid #E74C3C; text-align:center; }
+  .preview-slogan { background:#E74C3C; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:.88rem; font-weight:900; letter-spacing:2px; text-transform:uppercase; padding:8px; border-radius:3px; margin-bottom:7px; }
+
+  /* Print button */
+  .print-btn { display:block; width:100%; margin-top:20px; padding:14px; background:#C9A84C; color:#0B1E3D; border:none; border-radius:6px; font-family:'Barlow Condensed',sans-serif; font-size:1rem; font-weight:900; letter-spacing:2px; text-transform:uppercase; cursor:pointer; }
+</style>
+</head>
+<body>
+${html}
+<button class="print-btn no-print" onclick="window.print();window.close()">🖨️ Imprimer le bulletin</button>
+<script>
+  // Auto-focus pour imprimer directement si souhaité
+  window.focus();
+<\/script>
+</body>
+</html>`);
+  win.document.close();
 }
 
 // Scroll reveal
@@ -1053,9 +1103,4 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
     <li><a href="droits.html">Vos Droits</a></li>
     <li><a href="sante.html">Santé & Sécurité</a></li>
     <li><a href="elections.html">Élections 2026</a></li>
-    <li><a href="victoires.html">Nos Victoires</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-  <div class="foot-copy">© 2026 FMPS-i · Toujours copié, jamais égalé · 2 rue de l'Église, 94300 Vincennes · 09 81 94 43 91</div>
-</footer>
-</body></html>
+    <li><a href="victoires.html">Nos Victo
